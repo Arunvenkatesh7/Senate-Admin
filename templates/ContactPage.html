@@ -1,0 +1,1000 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Contact</title>
+    <meta name="description" content="">
+     <link rel="icon"  href="{{url_for('static',filename='Contactfiles/img/icons/senatelogo.ico')}}">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="assets/images/favicon.ico" type="img/x-icon" rel="shortcut icon">
+
+
+    <style>
+           .header-area.static{
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+   margin-top: 0px;
+   margin-bottom:30px
+
+
+}
+
+ .header-area.scrolling{
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  margin-top: 0px;
+   margin-bottom:30px
+
+
+}
+
+.navbar-brand.static,
+.navbar-brand img {
+  height: 120px;
+  margin-top: -10px;
+  margin-bottom:0px
+    padding-top: 40px;
+  padding-bottom: 20px;
+
+}
+
+.navbar-brand img.scrolling{
+  height: 110px;
+  margin-top: 10px;
+  margin-bottom:0px
+   padding-top: -5px;
+
+  padding-bottom: 10px;
+
+}
+
+.spacer {
+  margin-top: 140px;
+}
+
+
+.mapscontainer {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 60%; /* desired aspect ratio */
+	position: relative;
+}
+
+.googlemap {
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+    </style>
+    <!-- All css files are included here. -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Contactfiles/css/noti1style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/Clintellecss/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/Clintellecss/iconfont.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/Clintellecss/plugins.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/Clintellecss/helper.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/Clintellecss/styletemp.css') }}">
+
+    <!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/conloccss/style.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/locationcss/boxstyle.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/conloccss/conlocstyle.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- all locationcss here -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/icofont.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/shortcode/shortcodes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Contactfiles/css/responsive.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+        var headerArea = $('.header-area');
+        var navbarBrand = $('.navbar-brand');
+        var navbarBrandImg = $('.navbar-brand img');
+
+        if (scrollTop > 0) {
+          headerArea.addClass('scrolling');
+          navbarBrand.addClass('scrolling');
+          navbarBrandImg.addClass('scrolling');
+        } else {
+          headerArea.removeClass('scrolling');
+          navbarBrand.removeClass('scrolling');
+          navbarBrandImg.removeClass('scrolling');
+        }
+      });
+    });
+
+
+
+
+ function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+
+ document.addEventListener("click", function(event) {
+    var menu = document.getElementById("menu");
+    var menuIcon = document.querySelector(".menu-icon");
+
+    // Check if the clicked element is not within the menu or menu icon
+    if (!menu.contains(event.target) && !menuIcon.contains(event.target) && menu.classList.contains("show")) {
+        menu.classList.remove("show");
+    }
+});
+
+  </script>
+
+</head>
+ <body>
+
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="">upgrade your browser</a> to improve your experience.</p>
+
+       <div style="margin-left:85%;border-radius:70px;background-color:#FFF112;margin-top:5px;" class="navbar1">
+        <div style="border-radius:100%;color:#000;" class="menu-container">
+            <div style="font-size:15px;font-weight:bold;" class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul style="margin-left:1px;" class="menu" id="menu">
+                <li><a href="{{url_for('Home')}}">Home</a></li>
+                <li><a href="{{url_for('Project')}}">Projects</a></li>
+                <li><a href="{{url_for('About')}}">About Us</a></li>
+                <li><a href="{{url_for('Contact')}}">Contact</a></li>
+                <li><a href="{{url_for('Client')}}">Clientelle</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Page Wraper Here Start -->
+    <div class="page-wraper" id="main-home">
+        <!-- Header Area Start -->
+
+        <header class="header-area static">
+
+            <!-- Menu Area Start -->
+            <div class="header-area" id="sticky-header" style="background-color: #212121;">
+                <div class="container">
+                    <!-- Menu Start -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main-menu navbar navbar-expand-md justify-content-between">
+                                <div class="navbar-header">
+
+                                    <a class="navbar-brand static" href="{{url_for('Home')}}"><img id="imgproj" src="{{ url_for('static',filename='Contactfiles/img/Icons/SenateImg.png') }}"alt="logo"
+											class="img-responsive"></a>
+                                </div>
+                                <div class="collapse navbar-collapse" id="navigation">
+                                    <ul class="nav navbar-nav ms-auto">
+                                        <li ><a href="{{url_for('Home')}}">Home</a></li>
+                                        <li></li>
+                                        <li><a href="{{url_for('Project')}}">Services</a></li>
+                                        <li class="active"><a href="#">Contact <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="#clientid">Our Clintelle</a></li>
+                                                <li><a href="#contactformid">Leave a Message</a></li>
+                                                <li><a href="#contactusid">Email</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{url_for('About')}}">About Us</a></li>
+                                         <li><a href="{{url_for('Client')}}">Clientelle</a></li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu End -->
+                </div>
+            </div>
+            <!-- Menu Area Start -->
+            <!-- Slider Area Start -->
+            <div class="slider slider-for">
+                <!-- Slider Single Item -->
+                <div class="slider-item slickslider">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Thumbnail Image -->
+
+            <!-- Thumbnail Image -->
+            <!-- Slider Area End -->
+            <!-- Scroll Icon -->
+            <div class="scroll-icon text-center">
+                <a href="#about" class="wow fadeInDown infinite animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInDown;"><i
+						class="icofont icofont-scroll-down"></i></a>
+                <!-- Scroll Icon -->
+            </div>
+
+            </header>
+        </div>
+
+
+    <div class="spacer"></div>
+
+     <!-- Content Area Start -->
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+ </div>
+            </div>
+        </div>
+    </div>
+
+
+
+     <!-- Page Content Start -->
+        <div class="page-content">
+            <!-- About Us area Start -->
+            <section class="aboutus-area ptb-130" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="about-left">
+                                <div style="padding-bottom:40px;"></div>
+                                <div style="padding-right:20px;"> <img src="{{ url_for('static',filename='Contactfiles/img/SenateImg/AboutImg.jpg') }}"alt="" /></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="about-right mt-30">
+                                <h2 style="color:#000000;">Making your vision become a reality</h2>
+                                <h4>Build Your Dreams with Us</h4>
+                                <p> Our team of dedicated professionals is committed to
+                                    delivering exceptional construction solutions
+                                    tailored to your unique needs. We look forward to collaborating with you on your
+                                    upcoming project.</p>
+                                <p>At Senate Engineering, we understand the importance of turning your vision into reality.
+                                    With our expertise and attention to detail, we will work closely with you to bring your ideas to fruition. Our goal is to exceed your expectations and create spaces that inspire.
+
+                                    As a trusted construction company, we pride ourselves on solid
+                                    foundations for a brighter future. </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+  <section>
+
+
+      <a href="{{url_for('Project')}}">  <div class="probtn">View Projects>></div></a>
+    <div style="padding-bottom:80px;"></div>
+
+
+      <h2 id="contactusid" class="cardh2css">Get in Touch: Connect <span class="mover10"> with Our Construction<span><div class="mover9"> Professionals</div></h2>
+            <p id="mover22" class="cardpcss">Have questions or need advice regarding construction? Contact our knowledgeable team to access expert insights and reliable solutions tailored to your needs.</p>
+  <div style="background-image:'{{ url_for('static',filename='Contactfiles/img/conlocimg/image1.jpeg') }}' " class="conimage">
+  <div class="conimage-overlay">
+<h1 ><br>
+  <p style="padding-bottom:20px;" class="contacttext">
+
+ </p>
+
+
+  <br>
+  <br>
+ <div class="contacttext-center">
+    <div class="contactus-info">
+      <div class="contactcard"  style="width:500px;" >
+        <i class="contactcard-icon far fa-envelope"></i>
+        <p style="color:#212121;font-size:15px;font-weight:bold;" ><a href="mailto:stalin@senateeng.com">Email: stalin@senateeng.com</a></p>
+      </div>
+        <div class="mover11"></div>
+      <div class="contactcard" style="width:500px;">
+        <i class="contactcard-icon fas fa-phone"></i>
+        <p style="color:#212121;font-size:15px;font-weight:bold;"  class="txt">Phone No: +91 9500056905</p>
+      </div>
+        <div class="mover11"></div>
+      <div class="contactcard" style="width:500px;" onclick="openGoogleMaps('Pace Acyuta,Plot-25/26-E', 'Location 0')">
+        <i class="contactcard-icon fas fa-map-marker-alt"></i>
+        <p style="color:#212121;font-size:15px;font-weight:bold;" class="line" >Pace Acyuta,Plot-25/26-E,<br>
+        Rajiv Gandhi Salai,<br>
+        Seemathamman Nagar,<br>
+        Maduravoyal,Chennai-600 095</p>
+        </div>
+        <div class="mover11"></div>
+     </div>
+     </div>
+    </div>
+    </div>
+
+    </section >
+
+    <section id="contactformid"  class="contactpage">
+        <h2 id="mover12" class="cardh2css">Schedule a Site Visit: Arrange an On-Site Consultation</h2>
+      <p id="mover23"  class="cardpcss">Need on-site expertise for your construction project? Contact us to schedule a site visit and consultation with our construction professionals.</p>
+
+    <div style="margin-top:-100px;" class="concontainer">
+
+      <span class="big-circle"></span>
+      <img src="{{ url_for('static',filename='img/.png') }}"class="square" alt="" />
+      <div class="senateform">
+
+        <div class="contactus-info1">
+ <div style="margin-bottom:100px;"></div>
+        <figure>
+        <figcaption><h2>Solid foundations for a brighter future!<br><h2><br>
+        <h3>Our crew + your dream = phenomenal results.</h3></figcaption>
+        <br>
+
+         <img src="{{ url_for('static',filename='Contactfiles/img/conlocimg/image1.jpeg') }}"class="contactimg" name="contact" >
+
+ </figure>
+
+
+        </div>
+
+        <div class="contactus-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form method="POST" action="/postcontact" autocomplete="off">
+            <h3 class="title">Leave a message</h3>
+            <div class="input-concontainer">
+              <input type="text" name="name" id="name" class="input" placeholder="Name" />
+
+              <span>username</span>
+            </div>
+            <div class="input-concontainer">
+              <input type="email" name="email0" id="email0" class="input" placeholder="Email"/>
+
+              <span>Email</span>
+            </div>
+            <div class="input-concontainer">
+              <input type="tel" name="phone" id="phone" class="input" placeholder="Phone" />
+
+                 <div class="input-concontainer">
+              <input type="text" name="location" id="location" class="input" placeholder="Loaction"/>
+
+              <span>Some Other</span>
+            </div>
+              <span>Phone</span>
+            </div>
+
+
+<div class="input-container">
+
+  <select id="constructionType" name="constructionType" class="inputoption" onchange="this.style.color = 'black';">
+    <option value="" disabled selected>Type you Needed</option>
+    <option value="Design & Built<">Design & Built</option>
+    <option value="Construction Management">Construction Management</option>
+    <option value="Project Management">Project Management</option>
+    <option value="Structural Repairs">Structural Repairs</option>
+    <option value="Repairs and Refurbishment">Repairs and Refurbishment</option>
+    <!-- Add more options as needed -->
+  </select>
+</div>
+            <div class="input-concontainer textarea">
+              <textarea name="consdetails" id="consdetails" class="input" placeholder="Details" ></textarea>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="contactus-btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+</section>
+
+         <!--   <a href="#Newsletterid">   <div  style="margin-left:600px;margin-top:-1000px;" class="probtn">Subscribe To our Newsletter>></div></a>-->
+   <!-- <div class="html">
+               <section class="what-we-offer">
+        <h2 id="clientid" class="mover14">Our Valued Clients: Trusted Partners in Success</h2>
+      <p  class="mover15">Our valued clients are the driving force behind our success. Through trust and collaboration, we have achieved remarkable results together.</p>
+
+
+        <div class="what-we-offer__content-box">
+
+         <a id="Dot2id1" class="what-we-offer__content" style="border:none;">
+           <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+             Interspace Properties, Anna Nagar.
+            </h4>
+            <p class="paragraph">
+                we need to work more on this ,sir description
+              Whatever your construction requirements we can help you - from new
+              builds to refurbishments.
+            </p>
+           </div>
+         </a>
+
+          <a id="Dot2id2" class="what-we-offer__content" style="border:none;">
+            <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+              Vettri Theatres, Chromepet.
+            </h4>
+            <p class="paragraph">
+              Building Design, Interior Design, Structural Design, 3D
+              Visualization.
+            </p>
+            </div>
+          </a>
+
+   <a id="Dot2id3" class="what-we-offer__content" style="border:none;">
+            <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+             Fomra Housing, Anna Nagar
+            </h4>
+            <p class="paragraph">
+              We install and cable associated devices such as switches,
+              distribution boards, sockets, and light fittings in a structure.
+            </p>
+            </div>
+          </a>
+
+         <a id="Dot2id4" class="what-we-offer__content" style="border:none;">
+            <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+            RWD , Kelambakkam.
+            </h4>
+            <p class="paragraph">
+             Hard landscaping projects create an interesting outside area to
+              your property and will add to its value.
+            </p>
+            </div>
+          </a>
+
+
+               <a id="Dot2id5" class="what-we-offer__content" style="border:none;">
+            <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+            Gayathri Sridhar Residence, Navallur
+            </h4>
+            <p class="paragraph">
+              We design, install, commission, maintain and service a vast range
+              of mechanical equipment in Private Housing, Social Housing and
+              Commercial properties.
+            </p>
+            </div>
+          </a>
+
+
+               <a id="Dot2id6" class="what-we-offer__content" style="border:none;">
+            <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+             Rajaram Residence, Anna Nagar.
+            </h4>
+            <p class="paragraph">
+             We provide effective, service-oriented roofing and consistently
+              providing our clients with materials of the highest quality.
+            </p>
+            </div>
+          </a>
+
+             <a id="Dot2id7" class="what-we-offer__content" style="border:none;">
+            <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+            AA Garments-Manali
+            </h4>
+            <p class="paragraph">
+             We provide effective, service-oriented roofing and consistently
+              providing our clients with materials of the highest quality.
+            </p>
+            </div>
+          </a>
+
+  <a id="Dot2id8" class="what-we-offer__content" style="border:none;">
+            <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+               SAMEERA ESTATES PLTD,
+            </h4>
+            <p class="paragraph">
+              Address:Ponnamalle-Avadi main Road,Veeraragapuram,Ponamalle,chennai-77
+            </p>
+            </div>
+          </a>
+
+  <a id="Dot2id9" class="what-we-offer__content" style="border:none;">
+            <div>
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+                 Mrs.Kalaiselvi Residency,Uthandi
+            </h4>
+            <p class="paragraph">
+               We provide effective, service-oriented roofing and consistently
+              providing our clients with materials of the highest quality.
+            </p>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+</div>-->
+
+
+ <!--   <div style="padding-bottom:100px;"></div>
+
+
+  <h2 id="mover17" class="cardh2css">Our Valued Clients: Preview to Build Trust</h2>
+      <p id="mover18" class="cardpcss">Our valued clients are the driving force behind our success. Through trust and collaboration, we have achieved remarkable results together.</p>
+
+
+       Projects section start-->
+   <!--     <div id="tempidimage" class="project-section section bg-gray pt-95 pt-lg-75 pt-md-65 pt-sm-55 pt-xs-45 pb-100 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
+
+            <div class="row row-0 pl-15 pr-15">
+                <div class="project-slider project-slider-4-column ">
+
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a onclick="openGoogleMaps('Interspace Properties', 'Location 1')" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-1.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Interspace Properties</a></h4>
+                                <span class="category"><a href="#">Public</a>,<a href="#">Residental</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a onclick="openGoogleMaps('Interspace Properties', 'Location 1')" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-2.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Interspace Properties</a></h4>
+                                <span class="category"><a href="#">Landscape</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a onclick="openGoogleMaps('Vettri Theatres', 'Location 1')" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/Theatre4.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Vettri Theatres</a></h4>
+                                <span class="category"><a href="#">Interior</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div  class="project-item">
+                        <div class="project">
+                            <a onclick="openGoogleMaps('Interspace Properties', 'Location 1')" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/Theatre2.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html"></a></h4>
+                                <span class="category"><a href="#">Landscape</a><a href="#">Public</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a onclick="openGoogleMaps('Fomra Housing', 'Location 1')" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/HomeD1.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Fomra Housing</a></h4>
+                                <span class="category"><a href="#">Interior</a><a href="#">Residental</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/HomeD2.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Image gallery</a></h4>
+                                <span class="category"><a href="#">Interior</a><a href="#">Landscape</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/HomeD3.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Right description</a></h4>
+                                <span class="category"><a href="#">Interior</a><a href="#">Landscape</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/Washroom1.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Left description</a></h4>
+                                <span class="category"><a href="#">Apartment</a><a href="#">Interior</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-2.jpg') }}"alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Project 02</a></h4>
+                                <span class="category"><a href="#">Landscape</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-3.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Project 01</a></h4>
+                                <span class="category"><a href="#">Interior</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="image4" class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-4.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Image video</a></h4>
+                                <span class="category"><a href="#">Landscape</a><a href="#">Public</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id ='image5' class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-5.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Image slider</a></h4>
+                                <span class="category"><a href="#">Interior</a><a href="#">Residental</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-6.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Image gallery</a></h4>
+                                <span class="category"><a href="#">Interior</a><a href="#">Landscape</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-7.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Right description</a></h4>
+                                <span class="category"><a href="#">Interior</a><a href="#">Landscape</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a href="single-portfolio.html" class="image"><img src="{{ url_for('static',filename='Contactfiles/img/Clientelleimages/project/projrect-8.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Left description</a></h4>
+                                <span class="category"><a href="#">Apartment</a><a href="#">Interior</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>-->
+          <a href="{{url_for('Project')}}">    <div  style="margin-left:650px;margin-top:-1000px;" class="probtn">View Projects>></div></a>
+    <div style="padding-bottom:100px;"></div>
+
+     <section id="Newsletterid" class="newsletter-area bg-2 bg-overlay-1 ptb-60" style="background-color: #fff200;">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="newsletter-from text-center">
+                                <form id="subscribe-form" method="POST" action="/subscribe">
+                                    <h2>Subscribe for Newsletter</h2>
+                                    <div class="from-box">
+                                        <label for="email"></label>
+                                        <input  type="email" name="email" id="email" placeholder="Enter Your Mail"  autocomplete="off">
+                                         <input type="submit" value="SUBSCRIBE NOW" class="search-button">
+                                    </div></form>
+                                 <div class="alert hide">
+                        <span class="fas fa-exclamation-circle"></span>
+                        <span class="msg"></span>
+                        <div class="close-btn">
+                            <span class="fas fa-times"></span>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        <!-- Page Content End -->
+        <!-- Footer Area Start -->
+        <footer>
+            <!-- Footer Top Area End -->
+            <div class="footer-area grayblack-bg">
+                <div class="container">
+
+                    <!-- Footer Top Social End -->
+                    <div class="row footer-single-main pt-100 pb-65">
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-3 col-md-5 col-12">
+                            <div class="fotter-single-area">
+                               <h4><a href="{{url_for('Contact')}}">Contact Us</a></h4>
+                                <div class="contact-details">
+                                    <ul>
+                                        <li>
+                                            <img src= "{{ url_for('static',filename='Allfiles/img/icon/c1.png') }}" alt="" />
+                                            <p>Pace Acyuta, Plot-25/26-E , <br> Rajiv Gandhi Salai,Chennai</p>
+                                        </li>
+                                        <li>
+                                            <img src= "{{ url_for('static',filename='Allfiles/img/icon/c2.png') }}" alt="" />
+                                            <p>phone : +91-9500056905.</p>
+                                        </li>
+                                        <li>
+                                            <img src="{{ url_for('static',filename='Allfiles/img/icon/c3.png') }}" alt="" />
+                                            <p>Email : info@example.com <br> Web :www.senateeng.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-2 offset-lg-1 col-md-3 col-12">
+                            <div class="fotter-single-area">
+                                <h4>Our Services</h4>
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li><a href="#">Design & Built</a></li>
+                                        <li><a href="#">Project Management</a></li>
+                                        <li><a href="#">Constrction Management</a></li>
+                                        <li><a href="#">Repairs and Refurbishment</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-2 offset-md-1 col-md-3 col-12">
+                            <div class="fotter-single-area">
+                                <h4>Site Link</h4>
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li><a href="{{ url_for('Home')}}">Home</a></li>
+                                        <li><a href="{{ url_for('About')}}">About</a></li>
+                                        <li><a href="{{url_for('Project')}}">Projects</a></li>
+                                        <li><a href="{{url_for('Contact')}}#contactformid">Contact Us</a></li>
+                                        <li><a href="{{url_for('About')}}#faqsection">Faq</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-3 col-md-6 col-12 order-lg-4">
+                            <div class="fotter-single-area">
+                                <h4>Recent Projects</h4>
+                                <div class="post-area">
+                                    <div class="post-single">
+                                        <p>We not only have thorough expertise in
+                                            construction, we also do cost and strategic
+                                            consulting for construction projects.
+                                        </p>
+                                        <a href="{{url_for('Project')}}">View On Projects</a>
+                                    </div>
+                                    <div class="post-single">
+                                        <p>Our core team has years of experience in planning, budgeting,
+                            coordinating and supervising construction projects from start
+                                to finish
+                                        </p>
+                                        <a href="{{ url_for('Project')}}">View on Projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top Area Start -->
+
+        </footer>
+        <!-- Footer Area End -->
+    </div>
+    <!-- Page Wraper Here Start -->
+
+    <!-- All jquery file included here -->
+
+    <script src="{{ url_for('static',filename='Contactfiles/js/Clientellejs/vendor/jquery-3.6.0.min.js') }}"></script>
+
+    <script src="{{ url_for('static',filename='Contactfiles/js/Clientellejs/popper.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Contactfiles/js/Clientellejs/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Contactfiles/js/Clientellejs/plugins.js') }}"></script>
+    <script src="{{ url_for('static',filename='Contactfiles/js/Clientellejs/main.js') }}"></script>
+
+           <!-- all js here -->
+    <script src="{{ url_for('static',filename='Contactfiles/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Contactfiles/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Contactfiles/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Contactfiles/js/ajax-mail.js') }}"></script>
+    <script src="{{ url_for('static',filename='Contactfiles/js/plugins.js') }}"></script>
+    <!-- google map api -->
+
+    <script src="{{ url_for('static',filename='Contactfiles/js/main.js') }}"></script>
+
+
+  <script>
+ $(document).ready(function() {
+        $('#subscribe-form').submit(function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            var email = $('#email').val();
+
+            if (!isEmailValid(email)) {
+                showNotification('danger', 'Invalid email format.');
+                return;
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: '/subscribe',
+                data: { 'email': email },
+                success: function(response) {
+                    var theme = response.success ? 'success' : 'danger';
+                    showNotification(theme, response.message);
+                },
+                error: function() {
+                    showNotification('danger', 'An error occurred while subscribing.');
+                }
+            });
+        });
+
+        function isEmailValid(email) {
+    var pattern = /^[^\s@]+@gmail\.com$/;
+    return pattern.test(email);
+}
+
+        function showNotification(theme, message) {
+            $('.alert').removeClass('success danger').addClass(theme);
+            $('.msg').text(message);
+            showAlert();
+        }
+
+        $('.close-btn').click(function() {
+            hideAlert();
+        });
+
+        function showAlert() {
+            $('.alert').removeClass('hide');
+            $('.alert').addClass('showAlert');
+            setTimeout(function() {
+                hideAlert();
+            }, 5000);
+        }
+
+        function hideAlert() {
+            $('.alert').removeClass('show');
+            $('.alert').addClass('hide');
+        }
+    });
+
+
+   function openGoogleMaps(placeIdOrAddress, locationName) {
+      var zoom = 15; // Adjust the zoom level as needed
+
+      var url = `https://www.google.com/maps?q=${encodeURIComponent(placeIdOrAddress)}&z=${zoom}`;
+
+      var infowindow = `Click on ${locationName} for more information.`;
+      localStorage.setItem('infowindow', infowindow); // Store infowindow content in local storage
+
+      window.open(url, '_blank');
+    }
+    // Function to click dot2
+    function clickDot2() {
+        $('.project-slider-4-column .slick-dots li:eq(1) button').trigger('click');
+    }
+
+     // Function to click dot2
+    function clickDot1() {
+        $('.project-slider-4-column .slick-dots li:eq(0) button').trigger('click');
+    }
+
+    // Adding external link functionality
+    $('#Dot2id1 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot1(); // Trigger click on dot2
+    });
+
+      // Adding external link functionality
+    $('#Dot2id2 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot2(); // Trigger click on dot2
+    });
+
+    // Adding external link functionality
+    $('#Dot2id3 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot2(); // Trigger click on dot2
+    });
+
+    // Adding external link functionality
+    $('#Dot2id4 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot2(); // Trigger click on dot2
+    });
+
+    // Adding external link functionality
+    $('#Dot2id5 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot2(); // Trigger click on dot2
+    });
+
+    // Adding external link functionality
+    $('#Dot2id6 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot2(); // Trigger click on dot2
+    });
+
+    // Adding external link functionality
+    $('#Dot2id7 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot2(); // Trigger click on dot2
+    });
+
+    // Adding external link functionality
+    $('#Dot2id8 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot2(); // Trigger click on dot2
+    });
+
+    // Adding external link functionality
+    $('#Dot2id9 div').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        window.location.href = '#tempidimage'; // Replace with your external link URL
+        clickDot2(); // Trigger click on dot2
+    });
+
+
+</script>
+
+
+</body>
+
+</html>

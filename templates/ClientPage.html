@@ -1,0 +1,419 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Our Clients</title>
+     <link rel="icon"  href="{{url_for('static',filename='AllClient/img/senatelogo.ico')}}">
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <style>
+           .header-area.static{
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+   margin-top: 0px;
+   margin-bottom:30px
+
+
+}
+
+ .header-area.scrolling{
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  margin-top: 0px;
+   margin-bottom:30px
+
+
+}
+
+.navbar-brand.static,
+.navbar-brand img {
+  height: 120px;
+  margin-top: -10px;
+  margin-bottom:0px
+    padding-top: 40px;
+  padding-bottom: 20px;
+
+}
+
+.navbar-brand img.scrolling{
+  height: 110px;
+  margin-top: 10px;
+  margin-bottom:0px
+   padding-top: -5px;
+
+  padding-bottom: 10px;
+
+}
+
+.spacer {
+  margin-top: 140px;
+}
+
+    </style>
+
+
+    <!-- Place favicon.ico in the root directory -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/Client.css') }}">
+    <!-- all css here -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/bootstrap.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/font-awesome.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/shortcode/shortcodes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/responsive.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+        var headerArea = $('.header-area');
+        var navbarBrand = $('.navbar-brand');
+        var navbarBrandImg = $('.navbar-brand img');
+
+        if (scrollTop > 0) {
+          headerArea.addClass('scrolling');
+          navbarBrand.addClass('scrolling');
+          navbarBrandImg.addClass('scrolling');
+        } else {
+          headerArea.removeClass('scrolling');
+          navbarBrand.removeClass('scrolling');
+          navbarBrandImg.removeClass('scrolling');
+        }
+      });
+    });
+
+
+
+
+
+ function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+
+ document.addEventListener("click", function(event) {
+    var menu = document.getElementById("menu");
+    var menuIcon = document.querySelector(".menu-icon");
+
+    // Check if the clicked element is not within the menu or menu icon
+    if (!menu.contains(event.target) && !menuIcon.contains(event.target) && menu.classList.contains("show")) {
+        menu.classList.remove("show");
+    }
+});
+
+
+
+  </script>
+
+
+
+  </script>
+
+</head>
+
+ <body>
+    <div style="margin-left:85%;border-radius:70px;background-color:#FFF112;margin-top:5px;" class="navbar1">
+        <div style="border-radius:100%;color:#000;" class="menu-container">
+            <div style="font-size:15px;font-weight:bold;" class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul style="margin-left:1px;" class="menu" id="menu">
+              <li><a href="{{url_for('Home')}}">Home</a></li>
+                <li><a href="{{url_for('Project')}}">Projects</a></li>
+                <li><a href="{{url_for('About')}}">About Us</a></li>
+                <li><a href="{{url_for('Contact')}}">Contact</a></li>
+                <li><a href="{{url_for('Client')}}">Clientelle</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Page Wraper Here Start -->
+    <div class="page-wraper" id="main-home">
+        <!-- Header Area Start -->
+
+        <header class="header-area static">
+
+            <!-- Menu Area Start -->
+            <div class="header-area" id="sticky-header" style="background-color: #212121;">
+                <div class="container">
+                    <!-- Menu Start -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main-menu navbar navbar-expand-md justify-content-between">
+                                <div class="navbar-header">
+
+
+                                       <a class="navbar-brand static" href="{{url_for('Home')}}"><img id="imgproj" src="{{ url_for('static',filename='AllClient/img/SenateImg.png') }}"  alt="logo"
+											class="img-responsive"></a>
+                                </div>
+                                <div class="collapse navbar-collapse" id="navigation">
+                                    <ul class="nav navbar-nav ms-auto">
+                                         <li ><a href="{{ url_for('Home')}}">Home</a></li>
+                                        <li><a href="about-us.html"></a></li>
+                                        <li><a href="{{ url_for('Project')}}">Projects<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="{{ url_for('Project')}}#Designinpage">Design Section</a></li>
+                                                <li><a href="{{ url_for('Project')}}#Consinpage">Art of Construction</a></li>
+                                                <li><a href="{{ url_for('Project')}}#Projectinpage">Consulting</a></li>
+
+                                            </ul>
+
+
+                                        </li>
+
+                                        <li><a href="{{ url_for('About') }}">About Us</a></li>
+
+                                        <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+                                        <li class="active"><a href="{{ url_for('Client') }}">Clientelle</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu End -->
+                </div>
+            </div>
+            <!-- Menu Area Start -->
+            <!-- Slider Area Start -->
+            <div class="slider slider-for">
+                <!-- Slider Single Item -->
+                <div class="slider-item slickslider">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Thumbnail Image -->
+
+            <!-- Thumbnail Image -->
+            <!-- Slider Area End -->
+            <!-- Scroll Icon -->
+            <div class="scroll-icon text-center">
+                <a href="#about" class="wow fadeInDown infinite animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInDown;"><i
+						class="icofont icofont-scroll-down"></i></a>
+                <!-- Scroll Icon -->
+            </div>
+
+            </header>
+        </div>
+
+
+    <div class="spacer"></div>
+
+     <!-- Content Area Start -->
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+ </div>
+            </div>
+        </div>
+    </div>
+
+
+      <div class="section-padding clientgallery-section" id="clientgallery">
+        <div class="clientcontainer">
+          <!-- Section Title Start -->
+           <h2  class="cardh2css">OUR VALUED CLIENTS: TRUSTED PARTNERS IN SUCCESS</h2>
+ <p id="mover32" class="cardpcss">Our valued clients are the driving force behind our success. Through trust and collaboration, we have achieved remarkable results together.</p>
+
+
+                 <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Gayathri Sridhar Residence, Navallur</h2>
+            <p class="cardpcss" >Senate Engineering engaged in a bespoke project for Gayathri Sridhar residence—a personalized bungalow construction.<span class="centersw"> Turnkey design-build services ensure tailored excellence to specifications</span></p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+           <a ><img src="{{ url_for('static',filename='AllClient/img/Gayathri/img1.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/Gayathri/img2.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/Gayathri/img8.png') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/Gayathri/img7.png') }}"/></a>
+
+
+          </div>
+            <div class="mover28"></div>
+          <h2  class="h3cardcss"><span class="mover15">Interspace<span> Properties,Anna Nagar</h2>
+      <p  class="cardpcss" >Interspace Properties, the visionary property developers, collaborate with Senate Engineering, expertly coordinating consultants and overseeing construction to project fruition</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="{{ url_for('static',filename='AllClient/img/chrompet/picture1.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/chrompet/picture2.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/chrompet/picture3.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/chrompet/picture4.jpg') }}"/></a>
+
+
+          </div>
+
+            <div style="padding-top:30px;"></div>
+                <h2 id="mover29" class="h3cardcss">Vettri Theatres, Chromepet.</h2>
+      <p  class="cardpcss" >Senate Engineering collaborates with Vetri Theatres, providing expert construction services for their visionary cinema project, ensuring excellence in execution.</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="{{ url_for('static',filename='AllClient/img/chrompet/picture5.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/chrompet/picture6.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/chrompet/picture7.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/chrompet/picture8.jpg') }}"/></a>
+
+
+          </div>
+
+
+
+              <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Fomra Housing, Anna Nagar</h2>
+      <p  class="cardpcss" >Forma Housing, renowned property developers, collaborate seamlessly with Senate Engineering, overseeing technical coordination and construction monitoring to deliver exceptional outcomes</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+               <a ><img src="{{ url_for('static',filename='AllClient/img/fomra/img1.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/fomra/img2.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/fomra/img3.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/fomra/img4.jpg') }}"/></a>
+
+
+          </div>
+
+
+
+
+              <div style="padding-top:30px;"></div>
+
+
+
+
+
+
+
+
+
+                  <div style="padding-top:30px;"></div>
+                <h2 id="mover30" class="h3cardcss">SAMEERA ESTATES PLTD,</h2>
+      <p  class="cardpcss" >Senate Engineering partners with Sameera Estaes, a leading property developer, to craft captivating entrance arch designs, showcasing architectural prowess.</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+         <a ><img src="{{ url_for('static',filename='AllClient/img/Sameera/img1.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/Sameera/img2.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/Sameera/img3.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/Sameera/img4.jpg') }}"/></a>
+
+
+          </div>
+  <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Rajaram Residence, Anna Nagar.</h2>
+      <p  class="cardpcss" >Senate Engineering constructs Rajaram Residency, an exquisite individual home, showcasing our commitment to quality craftsmanship and architectural excellence</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="{{ url_for('static',filename='AllClient/img/rajaram/img1.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/rajaram/img2.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/rajaram/img3.jpg') }}"/></a>
+
+
+
+          </div>
+
+                    <div style="padding-top:30px;"></div>
+                <h2 id="mover31"   class="h3cardcss">RWD , Kelambakkam.</h2>
+      <p  class="cardpcss" >RWD, distinguished property developers, partner with Senate Engineering, ensuring precise technical coordination and vigilant construction supervision until project excellence is achieved</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+               <a ><img src="{{ url_for('static',filename='AllClient/img/rwd/img1.webp') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/rwd/img2.webp') }}"/></a>
+
+
+
+
+          </div>
+
+
+
+                  <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Mrs.Kalaiselvi Residency,Uthandi</h2>
+      <p  class="cardpcss" >Senate Engineering is dedicated to Kalaiselvi Residency's vision, crafting a personalized bungalow. Our turnkey process guarantees design precision and specification fulfillment</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+
+           <a ><img src="{{ url_for('static',filename='AllClient/img/Kalaiselvi/img5.jpg') }}"/></a>
+
+            <a ><img src="{{ url_for('static',filename='AllClient/img/Kalaiselvi/img6.jpg') }}"/></a>
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+  <script src="{{ url_for('static',filename='AllClient/js/Client.js') }}"></script>
+    <!-- all js here -->
+    <script src="{{ url_for('static',filename='AllClient/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='AllClient/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='AllClient/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='AllClient/js/ajax-mail.js') }}"></script>
+    <script src="{{ url_for('static',filename='AllClient/js/plugins.js') }}"></script>
+    <!-- google map api -->
+
+    <script src="{{ url_for('static',filename='AllClient/js/main.js') }}"></script>
+ </body>
+
+</html>

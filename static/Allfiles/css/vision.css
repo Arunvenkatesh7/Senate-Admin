@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+.visionbody{
+    background: #fff;
+}
+.visioncontainer{
+    position: relative;
+    width: 100%;  min-height: 100vh;
+}
+.visioncontainer .visionboxes{
+   position: absolute;
+   top: 50%;  width: 100%;  text-align: center;
+   transform: translate(0,-50%);
+}
+.visioncontainer .visionboxes .visionbox{
+    display: inline-block;
+    position: relative;
+    width: 300px;  min-height: 200px;
+    visionbox-shadow: 0 0 20px rgba(231,34,0,.5);
+    color: #fff;
+    margin: 10px;
+    padding: 30px 20px;
+    visionbox-sizing: border-visionbox;
+    text-align: center;
+    overflow: hidden;
+}
+.visioncontainer .visionboxes .visionbox img{
+    width: 100px;  height: 100px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+.visioncontainer .visionboxes .visionbox h1{
+    font-size: 20px;
+}
+.visioncontainer .visionboxes .visionbox h1 span{
+    font-size: 15px;
+    color: #2196f3;
+}
+.visioncontainer .visionboxes .visionbox:hover h1 span{
+    color: #fff;
+}
+
+
+.visioncontainer .visionboxes .visionbox::before,.visioncontainer .visionboxes .visionbox::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;  height: 100%;
+    z-index: -1;
+    transition: 1s;
+}
+.visioncontainer .visionboxes .visionbox::before{
+    background: #2d2d2d;
+    top: 0;
+}
+.visioncontainer .visionboxes .visionbox::after{
+    background: linear-gradient(0deg , #FFF132 , #212121);
+    top: 98%;
+}
+.visioncontainer .visionboxes .visionbox:hover::after{
+    top: 0;
+}

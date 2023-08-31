@@ -1,0 +1,752 @@
+<!doctype html>
+<html class="no-js" lang="zxx" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Senate Engineering-Home</title>
+      <link rel="icon"  href="{{url_for('static',filename='Allfiles/img/icons/senatelogo.ico')}}">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="{{url_for('static',filename='Allfiles/css/vision.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='Allfiles/css/notstyle.css') }}">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+ <link rel="stylesheet" href="{{ url_for('static',filename='Allfiles/css/Cardcss.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+     <link rel="stylesheet" href="{{ url_for('static',filename='Allfiles/css/hgcss/revslider.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='Allfiles/css/hgcss/plugins.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='Allfiles/css/hgcss/hgstyle.css') }}">
+
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href= "{{ url_for('static',filename='Allfiles/css/Infocss/bootstrap.css') }}">
+	<link rel="stylesheet" href= "{{ url_for('static',filename='Allfiles/js/Infovendors/linericon/style.css') }}">
+
+	<link rel="stylesheet" href= "{{ url_for('static',filename='Allfiles/js/Infovendors/owl-carousel/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href=  "{{ url_for('static',filename='Allfiles/js/Infovendors/lightbox/simpleLightbox.css') }}">
+	<link rel="stylesheet" href= "{{ url_for('static',filename='Allfiles/js/Infovendors/nice-select/css/nice-select.css') }}">
+	<link rel="stylesheet" href= "{{ url_for('static',filename='Allfiles/js/Infovendors/animate-css/animate.css') }}">
+	<link rel="stylesheet" href= "{{ url_for('static',filename='Allfiles/js/Infovendors/flaticon/flaticon.css') }}">
+	<!-- main Infocss -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='Allfiles/css/Infocss/Infostyle.css') }}">
+
+
+    <!-- all css here -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Allprojects/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='Allfiles/css/font-awesome.min.css') }}">
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static',filename='Allfiles/css/icofont.css') }}">
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static',filename='Allfiles/css/shortcode/shortcodes.css') }}">
+    <link rel="stylesheet"  type="text/css" href= "{{ url_for('static',filename='Allfiles/css/plugins.css') }}">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='Allfiles/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='Allfiles/css/responsive.css') }}">
+    <script src= "{{ url_for('static',filename='Allfiles/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+ <script>
+        function handleClick() {
+            var navbar = document.querySelector('.main-menu .navbar-collapse');
+            navbar.classList.toggle('collapsed');
+        }
+
+
+
+
+
+
+ function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+
+ document.addEventListener("click", function(event) {
+    var menu = document.getElementById("menu");
+    var menuIcon = document.querySelector(".menu-icon");
+
+    // Check if the clicked element is not within the menu or menu icon
+    if (!menu.contains(event.target) && !menuIcon.contains(event.target) && menu.classList.contains("show")) {
+        menu.classList.remove("show");
+    }
+});
+
+    </script>
+</head>
+
+ <body>
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+         <div style="margin-left:85%;border-radius:70px;background-color:#FFF112;margin-top:5px;" class="navbar1">
+        <div style="border-radius:100%;color:#000;" class="menu-container">
+            <div style="font-size:15px;font-weight:bold;" class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul style="margin-left:1px;" class="menu" id="menu">
+                <li><a href="{{url_for('Home')}}">Home</a></li>
+                <li><a href="{{url_for('Project')}}">Projects</a></li>
+                <li><a href="{{url_for('About')}}">About Us</a></li>
+                <li><a href="{{url_for('Contact')}}">Contact</a></li>
+                <li><a href="{{url_for('Client')}}">Clientelle</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Page Wraper Here Start -->
+    <div class="page-wraper" id="main-home">
+        <!-- Header Area Start -->
+        <header>
+            <!-- Menu Area Start -->
+            <div class="header-area" id="sticky-header">
+                <div class="container">
+                    <!-- Menu Start -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main-menu navbar navbar-expand-md justify-content-between">
+                                <div class="navbar-header">
+
+
+                                    <div style="margin-left:-30px;">
+                                    <a style="margin-top:20px;" class="navbar-brand" href="{{ url_for('Home')}}"><img id="imgproj" src= "{{ url_for('static',filename='Allfiles/img/Icons/SenateImg.png') }}"  alt="logo"
+											class="img-responsive"></a></div>
+                                </div>
+                                <div class="collapse navbar-collapse" id="navigation"><!---->
+                                    <ul class="nav navbar-nav ms-auto">
+                                        <li class="active"><a href="{{ url_for('Home')}}">Home</a></li>
+                                        <li><a href="about-us.html"></a></li>
+                                        <li><a href="{{ url_for('Project')}}">Projects<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="{{ url_for('Project')}}#Designinpage">Design Section</a></li>
+                                                <li><a href="{{ url_for('Project')}}#Consinpage">Art of Construction</a></li>
+                                                <li><a href="{{ url_for('Project')}}#Projectinpage">Consulting</a></li>
+
+                                            </ul>
+
+
+                                        </li>
+
+                                        <li><a href="{{ url_for('About') }}">About Us</a></li>
+
+                                        <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+                                        <li><a href="{{ url_for('Client') }}">Clientelle</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu End -->
+                </div>
+            </div>
+            <!-- Menu Area Start -->
+            <!-- Slider Area Start -->
+            <div class="slider slider-for">
+                <!-- Slider Single Item -->
+                <div class="slider-item slickslider">
+                    <img src= "{{ url_for('static',filename='Allfiles/img/SenateImg/Image1.jpg') }}" alt="" />
+                    <div class="slick-caption">
+                        <div class="slide-table container">
+                            <div class="table-cell row">
+                                <div class="col-12">
+                                    <div class="slide-content text-center text-white">
+                                        <h2>WE ARE HERE FOR <span> BUILD </span>YOU UP</h2>
+                                        <h1>BUILDING EXCELLENCE FROM GROUND UP</h1>
+                                        <div class="contact">
+                                            <a style="color:#212121;font-weight:bold;" href="{{ url_for('Project')}}">Let's Build</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Single Item -->
+                <!-- Slider Single Item -->
+                <div class="slider-item slickslider">
+                    <img src="{{ url_for('static',filename='Allfiles/img/SenateImg/Image2.jpg') }}" alt="" />
+                    <div class="slick-caption">
+                        <div class="slide-table container">
+                            <div class="table-cell row">
+                                <div class="col-12">
+                                    <div class="slide-content text-center text-white">
+                                           <h2>WE ARE HERE FOR <span> BUILD </span>YOU UP</h2>
+                                        <h1>'SHAPING DREAMS BRINGING SMILES'</h1>
+                                        <div class="contact">
+                                            <a style="color:#212121;font-weight:bold;" href="{{ url_for('Project')}}">Let's Build</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Single Item -->
+                <!-- Slider Single Item -->
+                <div class="slider-item slickslider">
+                    <img src="{{ url_for('static',filename='Allfiles/img/SenateImg/Image6.jpg') }}"  alt=""  />
+                    <div class="slick-caption">
+                        <div class="slide-table container">
+                            <div class="table-cell row">
+                                <div class="col-12">
+                                    <div class="slide-content text-center text-white">
+                                          <h2>WE ARE HERE FOR <span> BUILD </span>YOU UP</h2>
+                                        <h1>SOLUTIONS BEYOND EXPECTATIONS</h1>
+                                        <div >
+                                        <div  style="color:#212121;" class="contact">
+
+                                            <a style="color:#212121;font-weight:bold;" href="{{ url_for('Project')}}">Let's Build</a>
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Single Item -->
+            </div>
+            <!-- Thumbnail Image -->
+            <div class="thumbnail-img slider slider-nav">
+                <div><img src="{{ url_for('static',filename='Allfiles/img/Sliders/Image1.ico') }}" alt="" /></div>
+                <div><img src="{{ url_for('static',filename='Allfiles/img/Sliders/Image2.ico') }}" alt="" /></div>
+                <div><img src="{{ url_for('static',filename='Allfiles/img/Sliders/Image6.ico') }}" alt="" /></div>
+            </div>
+            <!-- Thumbnail Image -->
+            <!-- Slider Area End -->
+            <!-- Scroll Icon -->
+            <div class="scroll-icon text-center">
+                <a href="#about" class="wow fadeInDown infinite animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInDown;"><i
+						class="icofont icofont-scroll-down"></i></a>
+            <!-- Scroll Icon -->
+           </header>
+        <!-- Header Area End -->
+        <!-- Page Content Start -->
+
+        <div class="page-content">
+            <!-- About Us area Start -->
+            <section class="aboutus-area ptb-130" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="about-left">
+                                <div style="padding-bottom:50px;margin-left:0"></div>
+                                <img src="{{ url_for('static',filename='Allfiles/img/SenateImg/consimage.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="about-right mt-30">
+                                <h2 style="color:#000000;">Setting
+World Class
+Benchmarks of
+Construction Excellence</h2>
+                                <h4>Building Dreams - <span style="color:#fff200">With Us For You</span></h4>
+                                <p>Senate Engineering was founded by a
+                                        core team of professionals with over
+                                        20+ years of hands-on experience in
+                                            constructionandprojectmanagement..</p>
+                                <p>Senate Engineering was founded in
+                                        the year 2018 as a core construction
+                                        company and quickly transformed
+                                        into a multi-dimensional construction
+                                            company with strong expertise in
+                                        various facets of construction.
+                                        Engineers with 4 to 20 years of handson experience in different facades of
+                                        the construction industry.</p>
+                                <div class="download">
+                                    <a href="Allfiles/DownloadFiles/SeneteBrochere.pdf" target="_blank" download><i class="icofont icofont-download" "></i >Download
+										Our Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+                <!--================Welcome Area =================-->
+	<section class="welcome_area p_120">
+		<div class="container">
+			<div  class="row welcome_inner">
+
+				<div  class="col-lg-6">
+                    <div style="margin-bottom:100px;"></div>
+					<div  class="welcome_text">
+						<h4>Why Choose Us?</h4>
+						<p>Our quality focus, customer-focused business
+activities and efficient process mechanism
+ensure our customers get outstanding value
+for money, every time.<br><br>
+                            We believe in providing customized solutions to our clients.
+                            We will work closely with you to understand your goals, branding,
+                            and target audience.: We pride ourselves on our commitment to delivering high-quality craftsmanship. Our skilled construction
+                            professionals pay attention to every detail, ensuring aesthetics of Value Engineering.
+
+                        </p>
+
+					</div>
+				</div>
+		<div class="col-lg-6 col-12">
+                            <div class="about-left">
+                                <div style="padding-bottom:50px;padding-left:100px;"></div>
+                                <img style="border-radius:10px;" src="{{ url_for('static',filename='Allfiles/img/SenateImg/Image7.jpg') }}" alt="" />
+                            </div>
+                        </div>
+			</div>
+		</div>
+	</section>
+
+
+	<!--================End Welcome Area =================-->
+ <h2  class="cardh2css">The Legacies of Excellence</h2>
+            <p class="cardpcss">"Excellence in Construction: Our Vision and Mission Unite in Delivering Remarkable and Best&#32;&#32;Projects with Precision, Innovation, and Unparalleled Client Satisfaction."</p>
+<div class="visionbody">
+
+<div class="visioncontainer">
+
+    <div id="mover45"></div>
+                <div class="visionboxes">
+                    <div class="visionbox">
+                        <p>
+                            To emerge as a leader in the South Indian construction landscape by offering solutions
+beyond customer expectations
+                        </p>
+                        <img src="{{ url_for('static',filename='Allfiles/img/Icons/V1.jpg') }}">
+                        <h1>Vision<br></h1>
+                    </div>
+                    <div class="visionbox">
+                        <p>
+                         To transform our engineering
+excellence, construction prowess and innovation into tangible benefits
+for our customers.
+                        </p>
+                        <img src="{{ url_for('static',filename='Allfiles/img/Icons/V3.jpg') }}">
+                        <h1>Mission</h1>
+                    </div>
+                    <div class="visionbox">
+                        <p>
+                           Unveiling Masterful Craftsmanship, and an Unswerving Dedication to Client-Centricity
+                        </p>
+                        <img src="{{ url_for('static',filename='Allfiles/img/Icons/V2.jpg') }}">
+                        <h1>Excellency</h1>
+                    </div>
+                </div>
+            </div>
+</div>
+            <div id="mover46"></div>
+
+        <!--Projects section start-->
+        <div style="padding-top:100px;" class="project-section section bg-gray pt-95 pt-lg-75 pt-md-65 pt-sm-55 pt-xs-45 pb-100 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-30 mb-md-15 mb-md-10 mb-sm-10 mb-xs-0">
+                            <span style="color:#FFF200;">PORTFOLIO</span>
+                            <h1  class="hgtopic">Architectural Marvels: Pushing Boundaries of Design</h1>
+                            <p class="hgsubtopic">Delve into a world of architectural marvels that push the boundaries of design and innovation. Our gallery showcases iconic structures that captivate the imagination, blending aesthetics with practicality.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row row-0 pl-15 pr-15">
+                <div class="project-slider project-slider-4-column section">
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a  class="image"><img src="{{ url_for('static',filename='Allfiles/img/HomeImg/fomra.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Fomra</a></h4>
+                                <span class="category"><a href="#">Public</a>,<a href="#">Property Developers</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a class="image"><img src="{{ url_for('static',filename='Allfiles/img/HomeImg/gayathri.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Gayathri Residency</a></h4>
+                                <span class="category"><a href="#">Residental</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a  class="image"><img src="{{ url_for('static',filename='Allfiles/img/HomeImg/kalaiselvi.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Mrs.KalaiSelvi Residency,Uthandi</a></h4>
+                                <span class="category"><a href="#">Residental</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a  class="image"><img src="{{ url_for('static',filename='Allfiles/img/HomeImg/kelambakam.webp') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">RWD Kelambakkam</a></h4>
+                                <span class="category"><a href="#">Property Developers</a><a href="#">Public</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project">
+                            <a  class="image"><img src="{{ url_for('static',filename='Allfiles/img/HomeImg/rajaram.jpg') }}" alt=""></a>
+                            <div class="content">
+                                <h4 class="title"><a href="single-portfolio.html">Rajaram Residency</a></h4>
+                                <span class="category"><a href="#">Individual House</a><a href="#">Residental</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+           <a href="{{ url_for('Client') }}"><div  class="probtn"> View Projects>></div></a>
+        <!--Projects section end-->
+
+            <!--Project Gallery End-->
+
+	<!--================Feature Area =================-->
+	<section class="feature_area p_120">
+		<div class="container">
+			<div class="main_title">
+				<h2>Transforming Spaces: Unleashing the Power of  Designs and Constructions</h2>
+				<p>Experience the magic of interior design as we bring your spaces to life, blending creativity, functionality, and attention to detail for transformative and captivating environments.</p>
+			</div>
+			<div class="feature_inner row">
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<i class="flaticon-city"></i>
+						<h4>Architecture</h4>
+						<p> Iconic, visionary designs harmonize aesthetics, functionality, and sustainability for timeless structures and captivating spaces.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<i class="flaticon-skyline"></i>
+						<h4>Interior Design</h4>
+						<p>Transform spaces with creative vision, impeccable attention to detail, and personalized aesthetics.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<i class="flaticon-sketch"></i>
+						<h4>Planning</h4>
+						<p>Efficient, strategic approach ensures optimal functionality, sustainability, and seamless project execution with Desired Timeline.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<i class="flaticon-city"></i>
+						<h4>Landscape Design</h4>
+						<p> Create captivating outdoor spaces with expert vision, harmonious elements, and sustainable landscaping practices.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<i class="flaticon-skyline"></i>
+						<h4>Exterior Designs</h4>
+						<p>: Innovative, sustainable designs that seamlessly integrate with surroundings, leaving a lasting impression.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<i class="flaticon-sketch"></i>
+						<h4>Structural repairs</h4>
+						<p>We can make a thorough study
+of the structural strength and suggest
+ways to make the best use of the stability to save time and cost...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+         <a href="{{ url_for('Project') }}"> <div   class="probtn"> View Projects</div></a>
+            <div style="padding-bottom:100px;"></div>
+	<!--================End Feature Area =================-->
+
+
+
+	<!--================Testimonials Area =================-->
+<!--	<section class="testimonials_area testi_two p_120">
+		<div class="container">
+			<div class="main_title">
+				<h2>Testimonials</h2>
+				<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in
+					price. You may see some for as low as $.17 each.</p>
+			</div>
+			<div class="testi_inner">
+				<div class="testi_slider owl-carousel">
+					<div class="item">
+						<div class="testi_item">
+							<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth.
+								If you think about it, you travel across her face</p>
+							<h4>Fanny Spencer</h4>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star-half-o"></i></a>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testi_item">
+							<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth.
+								If you think about it, you travel across her face</p>
+							<h4>Fanny Spencer</h4>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star-half-o"></i></a>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testi_item">
+							<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth.
+								If you think about it, you travel across her face</p>
+							<h4>Fanny Spencer</h4>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star"></i></a>
+							<a href="#"><i class="fa fa-star-half-o"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+              <div  style="margin-left:650px; margin-bottom:180px;" class="probtn">Contact Us</div>-->
+	<!--================End Testimonials Area =================-->
+        <section id="Newsletterid" class="newsletter-area bg-2 bg-overlay-1 ptb-60" style="background-color: #fff200;">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="newsletter-from text-center">
+                                <form id="subscribe-form" method="POST" action="/subscribe">
+                                    <h2>Subscribe for Newsletter</h2>
+                                    <div class="from-box">
+                                        <label for="email"></label>
+                                        <input  type="email" name="email" id="email" placeholder="Enter Your Mail"  autocomplete="off">
+                                         <input type="submit" value="SUBSCRIBE NOW" class="search-button">
+                                    </div></form>
+                                 <div class="alert hide">
+                        <span class="fas fa-exclamation-circle"></span>
+                        <span class="msg"></span>
+                        <div class="close-btn">
+                            <span class="fas fa-times"></span>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        <!-- Page Content End -->
+        <!-- Footer Area Start -->
+        <footer>
+            <!-- Footer Top Area End -->
+            <div class="footer-area grayblack-bg">
+                <div class="container">
+                    <!-- Footer Top Social Start -->
+
+                    <!-- Footer Top Social End -->
+                    <div class="row footer-single-main pt-100 pb-65">
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-3 col-md-5 col-12">
+                            <div class="fotter-single-area">
+                               <h4><a href="{{url_for('Contact')}}">Contact Us</a></h4>
+                                <div class="contact-details">
+                                    <ul>
+                                        <li>
+                                            <img src= "{{ url_for('static',filename='Allfiles/img/icon/c1.png') }}" alt="" />
+                                            <p>Pace Acyuta, Plot-25/26-E , <br> Rajiv Gandhi Salai,Chennai</p>
+                                        </li>
+                                        <li>
+                                            <img src= "{{ url_for('static',filename='Allfiles/img/icon/c2.png') }}" alt="" />
+                                            <p>phone : +91-9500056905.</p>
+                                        </li>
+                                        <li>
+                                            <img src="{{ url_for('static',filename='Allfiles/img/icon/c3.png') }}" alt="" />
+                                            <p>Email : info@example.com <br> Web :www.senateeng.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-2 offset-lg-1 col-md-3 col-12">
+                            <div class="fotter-single-area">
+                                <h4>Our Services</h4>
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li><a href="#">Design & Built</a></li>
+                                        <li><a href="#">Project Management</a></li>
+                                        <li><a href="#">Constrction Management</a></li>
+                                        <li><a href="#">Repairs and Refurbishment</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-2 offset-md-1 col-md-3 col-12">
+                            <div class="fotter-single-area">
+                                <h4>Site Link</h4>
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li><a href="{{ url_for('Home')}}">Home</a></li>
+                                        <li><a href="{{ url_for('About')}}">About</a></li>
+                                        <li><a href="{{url_for('Project')}}">Projects</a></li>
+                                        <li><a href="{{url_for('Contact')}}#contactformid">Contact Us</a></li>
+                                        <li><a href="{{url_for('About')}}#faqsection">Faq</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-3 col-md-6 col-12 order-lg-4">
+                            <div class="fotter-single-area">
+                                <h4>Recent Projects</h4>
+                                <div class="post-area">
+                                    <div class="post-single">
+                                        <p>We not only have thorough expertise in
+                                            construction, we also do cost and strategic
+                                            consulting for construction projects.
+                                        </p>
+                                        <a href="{{url_for('Project')}}">View On Projects</a>
+                                    </div>
+                                    <div class="post-single">
+                                        <p>Our core team has years of experience in planning, budgeting,
+                            coordinating and supervising construction projects from start
+                                to finish
+                                        </p>
+                                        <a href="{{ url_for('Project')}}">View on Projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top Area Start -->
+
+        </footer>
+        <!-- Footer Area End -->
+    </div>
+    <!-- Page Wraper Here Start -->
+
+
+<script>
+    $(document).ready(function() {
+        $('#subscribe-form').submit(function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            var email = $('#email').val();
+
+            if (!isEmailValid(email)) {
+                showNotification('danger', 'Invalid email format.');
+                return;
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: '/subscribe',
+                data: { 'email': email },
+                success: function(response) {
+                    var theme = response.success ? 'success' : 'danger';
+                    showNotification(theme, response.message);
+                },
+                error: function() {
+                    showNotification('danger', 'An error occurred while subscribing.');
+                }
+            });
+        });
+
+        function isEmailValid(email) {
+    var pattern = /^[^\s@]+@gmail\.com$/;
+    return pattern.test(email);
+}
+
+        function showNotification(theme, message) {
+            $('.alert').removeClass('success danger').addClass(theme);
+            $('.msg').text(message);
+            showAlert();
+        }
+
+        $('.close-btn').click(function() {
+            hideAlert();
+        });
+
+        function showAlert() {
+            $('.alert').removeClass('hide');
+            $('.alert').addClass('showAlert');
+            setTimeout(function() {
+                hideAlert();
+            }, 5000);
+        }
+
+        function hideAlert() {
+            $('.alert').removeClass('show');
+            $('.alert').addClass('hide');
+        }
+    });
+</script>
+
+
+    <script src= "{{ url_for('static',filename='Allfiles/js/hgjs/hgvendor/jquery-3.6.0.min.js') }}"></script>
+    <script src= "{{ url_for('static',filename='Allfiles/js/hgjs/popper.min.js') }}"></script>
+    <script src= "{{ url_for('static',filename='Allfiles/js/hgjs/bootstrap.min.js') }}"></script>
+    <script src= "{{ url_for('static',filename='Allfiles/js/hgjs/plugins.js') }}"></script>
+    <script src="{{ url_for('static',filename='Allfiles/js/hgjs/main.js') }}"></script>
+
+
+    <!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.Infojs, then Bootstrap JS -->
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infojs/jquery-3.2.1.min.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infojs/popper.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infojs/bootstrap.min.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infojs/stellar.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infovendors/lightbox/simpleLightbox.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='Allfiles/js/Infovendors/nice-select/js/jquery.nice-select.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='Allfiles/js/Infovendors/isotope/imagesloaded.pkgd.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='Allfiles/js/Infovendors/isotope/isotope-min.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infovendors/owl-carousel/owl.carousel.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='Allfiles/js/Infojs/jquery.ajaxchimp.min.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infojs/mail-script.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infovendors/counter-up/jquery.waypoints.min.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infovendors/counter-up/jquery.counterup.min.js') }}"></script>
+	<script src= "{{ url_for('static',filename='Allfiles/js/Infojs/theme.js') }}"></script>
+
+
+
+    <!-- all js here -->
+    <script src="{{ url_for('static',filename='Allfiles/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src= "{{ url_for('static',filename='Allfiles/js/bootstrap.min.js') }}"></script>
+    <script src= "{{ url_for('static',filename='Allfiles/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src= "{{ url_for('static',filename='Allfiles/js/ajax-mail.js') }}"></script>
+    <script src= "{{ url_for('static',filename='Allfiles/js/plugins.js') }}"></script>
+    <!-- google map api -->
+
+    <script src= "{{ url_for('static',filename='Allfiles/js/main.js') }}"></script>
+ </body>
+
+</html>

@@ -1,0 +1,954 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Services</title>
+    <meta name="description" content="">
+ <link rel="icon"  href="{{url_for('static',filename='Allprojects/img/icons/senatelogo.ico')}}">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <style>
+           .header-area.static{  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+   margin-top: 0px;
+   margin-bottom:30px
+
+
+}
+
+ .header-area.scrolling{
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  margin-top: 0px;
+   margin-bottom:30px
+
+
+}
+
+.navbar-brand.static,
+.navbar-brand img {
+  height: 120px;
+  margin-top: 0px;
+  margin-bottom:10px
+   padding-top: 40px;
+  padding-bottom: 20px;
+
+}
+
+.navbar-brand img.scrolling{
+  height: 110px;
+  margin-top: 10px;
+  margin-bottom:0px
+   padding-top: -5px;
+
+  padding-bottom: 10px;
+
+}
+
+.spacer {
+  margin-top: 140px;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Allprojects/css/notstyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/mediachange.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/Boxes/Boxstyle.css') }}" />
+    <!-- Place favicon.ico in the root directory -->
+ <link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/Pcss/Prostyle.css') }}">
+    <!-- all Boxes here -->
+<link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/Imgshow/Imgshow.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/icofont.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/shortcode/shortcodes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='Allprojects/css/responsive.css') }}">
+
+
+    <script>
+
+
+ function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+
+ document.addEventListener("click", function(event) {
+    var menu = document.getElementById("menu");
+    var menuIcon = document.querySelector(".menu-icon");
+
+    // Check if the clicked element is not within the menu or menu icon
+    if (!menu.contains(event.target) && !menuIcon.contains(event.target) && menu.classList.contains("show")) {
+        menu.classList.remove("show");
+    }
+});
+
+
+
+  </script>
+
+</head>
+
+ <body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+<div style="margin-left:85%;border-radius:70px;background-color:#FFF112;margin-top:5px;" class="navbar1">
+        <div style="border-radius:100%;color:#000;" class="menu-container">
+            <div style="font-size:15px;font-weight:bold;" class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul style="margin-left:1px;" class="menu" id="menu">
+                <li><a href="{{url_for('Home')}}">Home</a></li>
+                <li><a href="{{url_for('Project')}}">Projects</a></li>
+                <li><a href="{{url_for('About')}}">About Us</a></li>
+                <li><a href="{{url_for('Contact')}}">Contact</a></li>
+                <li><a href="{{url_for('Client')}}">Clientelle</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Page Wraper Here Start -->
+    <div class="page-wraper" id="main-home">
+        <!-- Header Area Start -->
+
+        <header class="header-area static">
+
+            <!-- Menu Area Start -->
+            <div class="header-area" id="sticky-header" style="background-color: #212121;">
+                <div class="container">
+                    <!-- Menu Start -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main-menu navbar navbar-expand-md justify-content-between">
+                                <div class="navbar-header">
+
+                                    <a class="navbar-brand static" href="{{url_for('Home')}}"><img id="imgproj" src="{{ url_for('static',filename='Allprojects/img/Icons/SenateImg.png') }}"  alt="logo"
+											class="img-responsive"></a>
+                                </div>
+                                <div class="collapse navbar-collapse" id="navigation">
+                                    <ul class="nav navbar-nav ms-auto">
+                                        <li><a href="{{url_for('Home')}}">Home</a></li>
+
+                                        <li class="active"><a href="{{url_for('Project')}}">Services<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="#Designinpage">Design & Built</a></li>
+                                                <li><a href="#Consinpage">Construction Management</a></li>
+                                                <li><a href="#Projectinpage">Project Management</a></li>
+                                            </ul>
+                                        </li>
+
+                                         <li><a href="{{url_for('About')}}">About Us</a></li>
+                                        <li><a href="{{url_for('Contact')}}">Contact</a></li>
+                                        <li><a href="{{url_for('Client')}}">Clientelle</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu End -->
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Menu Area Start -->
+            <!-- Slider Area Start -->
+            <div class="slider slider-for">
+                <!-- Slider Single Item -->
+                <div class="slider-item slickslider">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Thumbnail Image -->
+
+            <!-- Thumbnail Image -->
+            <!-- Slider Area End -->
+            <!-- Scroll Icon -->
+            <div class="scroll-icon text-center">
+                <a href="#about" class="wow fadeInDown infinite animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInDown;"><i
+						class="icofont icofont-scroll-down"></i></a>
+                <!-- Scroll Icon -->
+            </div>
+
+            </header>
+        </div>
+
+
+    <div class="spacer"></div>
+
+     <!-- Content Area Start -->
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+ </div>
+            </div>
+        </div>
+    </div>
+
+ <section class="what-we-offer">
+        <div class="heading__fix u-center-text">
+          <h3  style="color:#fff000 ;font-weight:bold " class="heading-tertiary u-margin-bottom-small">Our services</h3>
+        </div>
+
+        <h2 style= "padding-left:20%; " class="servicetopic">
+         Streamlined Construction Excellence:
+            <br><div class="mover"> Design, Build, Manage</div>
+        </h2>
+        <p class="servicesubtopic">
+            Experience excellence in construction with our comprehensive services covering <span class="mover2"> design, construction, and project management.</span>
+        </p>
+
+
+        <div class="what-we-offer__content-box">
+
+          <div class="what-we-offer__content">
+              <a href="#Designinpage">
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+               Design & Built
+            </h4>
+            <p class="paragraph">
+             Seamless Integration: Design, Build, Deliver. Excellence in construction through our vertically-integrated approach and customer-centric solutions
+            </p>
+                  </a>
+          </div>
+
+          <div class="what-we-offer__content">
+             <a href="#Consinpage">
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+                Construction Management & Project Management
+            </h4>
+            <p class="paragraph">
+              Excellence in Construction Management: Delivering Quality, On Time.Effortless Project Execution. Our expertise in project management ensures a seamless construction process, meticulously coordinated for timely delivery
+            </p>
+             </a>
+          </div>
+          <div class="what-we-offer__content">
+               <a href="#Projectinpage">
+            <h4 class="what-we-offer__title u-margin-bottom-small">
+              Structural Repairs And Refurbishment
+            </h4>
+            <p class="paragraph">
+we can also do repairs and
+refurbishments exclusively. We can redo already constructed
+projects or old projects with minimal demolition.We can  suggest
+ways to make the best use of the stability to save time and cost.
+            </p>
+              </a>
+          </div>
+
+
+      </section>
+
+
+
+    <section id="project-version-one" class="construct home">
+        <div class="Projcontainer">
+            <div id="Designinpage" style="padding-bottom:50px;" >
+            <div  style="padding-left:90px;" class="section-title">
+                <h1>Building Dreams: Showcasing Exquisite Design</h1>
+            </div>
+            </div>
+        </div>
+        <div class="Projcontainer-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="gallery-filter">
+                        <li data-filter="all">
+                            <span>All</span>
+                        </li>
+                        <li data-filter=".kitchen">
+                            <span>Exterior &Interior</span>
+                        </li>
+                        <li data-filter=".bathroom">
+                            <span>Renovaion of house</span>
+                        </li>
+
+                        <li data-filter=".plumbing">
+                            <span>Design Elevation</span>
+                        </li>
+                        <li data-filter=".outside">
+                            <span>Ground-Up Constructions</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row normal-gallery gallery-v4" id="image-gallery-mix">
+                <div class="single-project-item mix  tank outside">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/1.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Building Construction" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Building Construction</h4>
+                                    <span>Quality, Efficiency, Expertise – Transforming Visions into Reality.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix plumbing outside">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/2.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Building Renovation" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Building Renovation</h4>
+                                    <span>Revitalize, Enhance, Transform – Breathing New Life into Spaces</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix drain plumbing bathroom">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/3.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Interior Design package"><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Interior Design package</h4>
+                                    <span> Elevate, Design, Transform – Crafting Inspirational Spaces </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix kitchen outside drain bathroom">
+                    <div class=" -wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/4.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Isolation" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Isolation</h4>
+                                    <span> Secure, Protect, Optimize – Ensuring Safety</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix kitchen  bathroom">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/5.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Roof Repairing" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Roof Repairing</h4>
+                                    <span>Restore, Strengthen, Protect – Expert Solutions for Reliable Roofing Integrity.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix kitchen drain ">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/6.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Architecture Conslulting" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Architecture Conslulting</h4>
+                                    <span>Vision, Innovation, Precision – Unleashing the Potential of Exceptional Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix kitchen drain bathroom">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/7.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Building Maintanance" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Building Maintanance</h4>
+                                    <span> Preserve, Enhance, Sustain – Ensuring Optimal Performance </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix kitchen drain bathroom">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/8.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Building Construction"><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Interior Designs</h4>
+                                    <span>Inspire, Transform, Personalize – Creating Captivating Spaces for Every Lifestyle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix kitchen drain bathroom">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/9.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Building Renovation" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Construction Modelling</h4>
+                                    <span> Visualize, Plan, Optimize – Harnessing the Power of Digital Innovation..</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-project-item mix kitchen drain bathroom">
+                    <div class="img-wrap">
+                        <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/project-v4/10.jpg') }}" alt="">
+                        <div class="content-wrapper hvr-sweep-to-right">
+                            <div class="content">
+                                <div class="button-box">
+                                    <a class="fa" data-fancybox-group="home-gallery" title="Interior Design package" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="text-box">
+                                    <h4>Exterior Design package</h4>
+                                    <span> Enrich, Enhance, Impress – Elevating the Aesthetics of Outdoor Spaces.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-btn text-center"><a href="{{url_for('Contact')}}#contactformid" class="view-all hvr-bounce-to-right">Let's Build</a></div>
+        </div>
+    </section>
+
+
+
+
+
+ <!--   <div class="mover3"><h1 class="ImgShowtopic">Construction Planning Unveiled: Showcasing Projects<br> </h1></div>
+    <div id="Consinpage"><p class="ImgShowsubtopic">Strategic Construction Planning: Blueprint Showcase - Transforming Visions into Execution</p></div>
+    <div class="proboxbody">
+
+		<div class="proboxcontainer">
+
+
+			<div class="boxtemplate">
+				<div class="proboximgBx">
+					<img src="{{ url_for('static',filename='Allprojects/img/Imgshow/img1.jpg') }}">
+				</div>
+				<div class="proboxcontent">
+					<h2>Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="boxtemplate">
+				<div class="proboximgBx">
+					<img src="{{ url_for('static',filename='Allprojects/img/Imgshow/image1.jpg') }}">
+				</div>
+				<div class="proboxcontent">
+					<h2>Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="boxtemplate">
+				<div class="proboximgBx">
+					<img src="{{ url_for('static',filename='Allprojects/img/Imgshow/image2.jpg') }}">
+				</div>
+				<div class="proboxcontent">
+					<h2>Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="boxtemplate">
+				<div class="proboximgBx">
+					<img src="{{ url_for('static',filename='Allprojects/img/Imgshow/image3.jpg') }}">
+				</div>
+				<div class="proboxcontent">
+					<h2>Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+
+            	<div class="boxtemplate">
+				<div class="proboximgBx">
+					<img src="{{ url_for('static',filename='Allprojects/img/Imgshow/image4.jpg') }}">
+				</div>
+				<div class="proboxcontent">
+					<h2>Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+
+            	<div class="boxtemplate">
+				<div class="proboximgBx">
+					<img src="{{ url_for('static',filename='Allprojects/img/Imgshow/image2.jpg') }}">
+				</div>
+				<div class="proboxcontent">
+					<h2>Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+
+            	<div class="boxtemplate">
+				<div class="proboximgBx">
+					<img src="{{ url_for('static',filename='Allprojects/img/Imgshow/image1.jpg') }}">
+				</div>
+				<div class="proboxcontent">
+					<h2>Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+
+            	<div class="boxtemplate">
+				<div class="proboximgBx">
+					<img src="{{ url_for('static',filename='Allprojects/img/Imgshow/image3.jpg') }}">
+				</div>
+				<div class="proboxcontent">
+					<h2>Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+        <div style="padding-bottom:80px;"></div>
+     <a href="{{ url_for('Project') }}"><div  class="probtn"> Contact Us>></div></a>-->
+
+
+
+
+ <div class="mover4"><h1 class="ImgShowtopic">Efficient Project Management:Success with Precision<br> </h1></div>
+    <div id="Projectinpage" ><p class="ImgShowsubtopic" >Seamless Project Management: Precise Planning, Timely Execution, Exemplary Results.</p></div>
+
+
+<div style="margin-top:-50px;">
+    <section id="our-team-construct">
+        <div class="Projcontainer">
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show1.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Project Planning</h2>
+                            <p>Masterful Project Planning: Blueprint to Reality – Precision in Action</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show2.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Scrap and paint</h2>
+                            <p>Transformative Craftsmanship: Revitalizing Spaces with Meticulous Scraping and Painting</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show3.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Expert Consultations</h2>
+                            <p>Unleashing Expertise: Insightful Consultations for Informed Decisions and Project Success.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show4.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Demolition</h2>
+                            <p>Precision Demolition: Expertise, Safety, Efficiency – Transforming Spaces with Confidence.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show5.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Navigate Complexities</h2>
+                            <p>Effortless Execution: Navigating Complexities for Seamless Project Management Success</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show6.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Execution Excellence</h2>
+                            <p>Pinnacle of Execution: Unwavering Precision, Remarkable Outcomes</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show7.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Precision Instruments</h2>
+                            <p>Unleash Efficiency: Better Instruments for Superior Results and Enhanced Precision.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show4.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Demolition</h2>
+                            <p>Precision Demolition: Expertise, Safety, Efficiency – Transforming Spaces with Confidence.</p>
+
+                        </div>
+                    </div>
+                </div>
+              <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show2.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Scrap and paint</h2>
+                            <p>Transformative Craftsmanship: Revitalizing Spaces with Meticulous Scraping and Painting</p>
+
+                        </div>
+                    </div>
+                </div>
+               <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show6.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Execution Excellence</h2>
+                            <p>Pinnacle of Execution: Unwavering Precision, Remarkable Outcomes</p>
+
+                        </div>
+                    </div>
+                </div>
+              <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show7.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Precision Instruments</h2>
+                            <p>Unleash Efficiency: Better Instruments for Superior Results and Enhanced Precision.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-construct-member">
+                        <div class="img-holder">
+                            <img src="{{ url_for('static',filename='Allprojects/img/Pimgs/our-team-construct/show6.jpg') }}" alt="">
+                        </div>
+                        <div class="content hvr-bounce-to-bottom">
+                            <h2>Execution Excellence</h2>
+                            <p>Pinnacle of Execution: Unwavering Precision, Remarkable Outcomes</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+     <a href="{{ url_for('Project') }}"><div  class="probtn"> Contact Us>></div></a>
+    <div style="padding-bottom:80px;"></div>
+    </div>
+
+  <section id="Newsletterid" class="newsletter-area bg-2 bg-overlay-1 ptb-60" style="background-color: #fff200;">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="newsletter-from text-center">
+                                <form id="subscribe-form" method="POST" action="/subscribe">
+                                    <h2>Subscribe for Newsletter</h2>
+                                    <div class="from-box">
+                                        <label for="email"></label>
+                                        <input  type="email" name="email" id="email" placeholder="Enter Your Mail"  autocomplete="off">
+                                         <input type="submit" value="SUBSCRIBE NOW" class="search-button">
+                                    </div></form>
+                                 <div class="alert hide">
+                        <span class="fas fa-exclamation-circle"></span>
+                        <span class="msg"></span>
+                        <div class="close-btn">
+                            <span class="fas fa-times"></span>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Page Content End -->
+        <!-- Footer Area Start -->
+        <footer>
+            <!-- Footer Top Area End -->
+            <div class="footer-area grayblack-bg">
+                <div class="container">
+                    <!-- Footer Top Social Start -->
+
+                    <!-- Footer Top Social End -->
+                    <div class="row footer-single-main pt-100 pb-65">
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-3 col-md-5 col-12">
+                            <div class="fotter-single-area">
+                                <h4>Contact Us</h4>
+                                <div class="contact-details">
+                                    <ul>
+                                        <li>
+
+                                            <img src="{{ url_for('static',filename='img/icon/c1.png') }}" alt="" />
+                                            <p>Pace Acyuta, Plot-25/26-E ,<br> Rajiv Gandhi Salai,Chennai</p>
+                                        </li>
+                                        <li>
+                                            <img src="{{ url_for('static',filename='img/icon/c2.png') }}" alt="" />
+                                            <p>phone : +91-9500056905.
+ </p>
+                                        </li>
+                                        <li>
+                                            <img src="{{ url_for('static',filename='img/icon/c3.png') }}" alt="" />
+                                            <p>Email :stalin@senateeng.com
+ <br> Web : www.senateeng.com
+</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-2 offset-lg-1 col-md-3 col-12">
+                            <div class="fotter-single-area">
+                                <h4 style="padding-left:40px;">Our Services</h4>
+                                <div class="footer-menu">
+
+                                    <ul>
+                                        <li><a href="#Designinpage"><p class="footertexters">Design & built</p></a></li>
+                                        <li><a href="Consinpage"><p class="footertexters">Construction Management</p></a></li>
+                                        <li><a href="Projectinpage"><p class="footertexters">Project Management</p></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-2 offset-md-1 col-md-3 col-12">
+                            <div class="fotter-single-area">
+                                <h4 style="padding-left:40px;">Site Link</h4>
+
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li><a href="{{url_for('Home')}}"><p class="footertexters">Home</p></a></li>
+                                        <li><a href="{{url_for('Project')}}"><p class="footertexters">projects</p></a></li>
+                                        <li><a href="{{url_for('About')}}"><p class="footertexters">About US</p></a></li>
+                                        <li><a href="{{url_for('Contact')}}"><p class="footertexters">Contact</p></a></li>
+                                        <li><a href="{{url_for('About')}}#faqsection"><p class="footertexters">FAQ</p></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                        <!-- Footer Single Box -->
+                        <div class="col-lg-3 col-md-6 col-12 order-lg-4">
+                            <div class="fotter-single-area">
+                                <h4>Recent Post</h4>
+                                <div class="post-area">
+                                    <div class="post-single">
+                                        <p>We not only have thorough expertise in
+                                            construction, we also do cost and strategic
+                                            consulting for construction projects.
+                                        </p>
+                                        <a href="{{url_for('Project')}}">View Projects</a>
+                                    </div>
+                                    <div class="post-single">
+                                        <p>Our core team has years of experience in planning, budgeting,
+                            coordinating and supervising construction projects from start
+                                to finish
+                                        </p>
+                                        <a href="{{url_for('Project')}}">View Projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Single Box -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top Area Start -->
+            <!-- Footer Bottom Area Start -->
+
+        </footer>
+        <!-- Footer Area End -->
+    </div>
+    <!-- Page Wraper Here Start -->
+
+
+
+<script>
+    $(document).ready(function() {
+        $('#subscribe-form').submit(function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            var email = $('#email').val();
+
+            if (!isEmailValid(email)) {
+                showNotification('danger', 'Invalid email format.');
+                return;
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: '/subscribe',
+                data: { 'email': email },
+                success: function(response) {
+                    var theme = response.success ? 'success' : 'danger';
+                    showNotification(theme, response.message);
+                },
+                error: function() {
+                    showNotification('danger', 'An error occurred while subscribing.');
+                }
+            });
+        });
+
+        function isEmailValid(email) {
+    var pattern = /^[^\s@]+@gmail\.com$/;
+    return pattern.test(email);
+}
+
+        function showNotification(theme, message) {
+            $('.alert').removeClass('success danger').addClass(theme);
+            $('.msg').text(message);
+            showAlert();
+        }
+
+        $('.close-btn').click(function() {
+            hideAlert();
+        });
+
+        function showAlert() {
+            $('.alert').removeClass('hide');
+            $('.alert').addClass('showAlert');
+            setTimeout(function() {
+                hideAlert();
+            }, 5000);
+        }
+
+        function hideAlert() {
+            $('.alert').removeClass('show');
+            $('.alert').addClass('hide');
+        }
+    });
+</script>
+
+
+    <!-- all js here -->
+
+    <script src="{{ url_for('static',filename='Allprojects/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Allprojects/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Allprojects/js/ajax-mail.js') }}"></script>
+    <script src="{{ url_for('static',filename='Allprojects/js/plugins.js') }}"></script>
+     <script src="{{ url_for('static',filename='Allprojects/js/main.js') }}"></script>
+    <!-- google map api -->
+
+
+     <script src="{{ url_for('static',filename='Allprojects/js/Projs/Projquery-1.11.3.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Allprojects/js/Projs/Probootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='Allprojects/js/Projs/Projquery.mixitup.min.js') }}"></script>
+
+    <script src="{{ url_for('static',filename='Allprojects/js/Projs/Prowow.js') }}"></script>
+
+    <script src="{{ url_for('static',filename='Allprojects/js/Projs/Proowl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='Allprojects/js/Projs/Provalidate.js') }}"></script>
+    <script src="{{ url_for('static',filename='Allprojects/js/Projs/Procustom.js') }}"></script>
+
+
+    <script src="{{ url_for('static',filename='Allprojects/js/main.js') }}"></script>
+ </body>
+
+</html>

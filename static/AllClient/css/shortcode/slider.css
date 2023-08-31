@@ -1,0 +1,137 @@
+
+.slickslider {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slick-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    padding: 25px 0 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.slider-item.slickslider.slick-slide>img {
+    background-size: cover;
+}
+
+@media (max-width: 575px) {
+    .slider-item.slickslider.slick-slide>img {
+        height: 360px;
+        object-fit: cover;
+    }
+}
+
+.slide-table {
+    display: table;
+    height: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.thumbnail-img.slider.slider-nav.slick-initialized.slick-slider {
+    bottom: 150px;
+    display: block;
+    position: absolute;
+    right: 65px;
+    text-align: right;
+    width: 315px;
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+}
+
+.slide-content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    animation-delay: 0.8s;
+}
+
+.slide-content h2 span {
+    color: #FFF112 ;
+}
+
+.slide-content h1 {
+    font-family: lato;
+    font-size: 52px;
+    font-weight: 900;
+    margin: 0 0 30px;
+    animation-delay: 1.2s;
+}
+
+.contact>a {
+    background: #FFF112  none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    padding: 10px 30px;
+    transition: .3s;
+    border: 1px solid #FFF112 ;
+    animation-delay: 1.6s;
+}
+
+.contact>a:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* Scroll Icon Slider */
+
+.scroll-icon {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.scroll-icon a {
+    display: inline-block;
+    margin-bottom: 30px;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.scroll-icon a i {
+    color: #fff;
+    font-size: 30px;
+}
+
+/* Slider Animation Css */
+
+.slick-caption .slide-content * {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+}
+
+.slick-active .slick-caption .slide-content h2 {
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+}
+
+.slick-active .slick-caption .slide-content h1 {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.slick-active .slick-caption .slide-content a {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}

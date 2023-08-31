@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+
+.alert {
+  background: #ffdb9b;
+  min-width: 420px;
+
+  position: absolute;
+  right: 0;
+  top: 10px;
+
+  border-left: 8px solid #ffa502;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  margin-left:300px;
+  margin-right:300px;
+
+}
+
+
+@media screen and (max-width:767px){
+.alert {
+  background: #ffdb9b;
+  min-width: 420px;
+
+  position: absolute;
+  right: 0;
+  top: 10px;
+
+  border-left: 8px solid #ffa502;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  margin-left:-66px;
+  margin-right:0px;
+
+}
+
+}
+
+
+.alert.showAlert {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animation for showing the notification bar */
+.alert.show {
+  animation: show_slide 1s ease forwards;
+}
+
+@keyframes show_slide {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+/* Animation for hiding the notification bar */
+.alert.hide {
+  animation: hide_slide 1s ease forwards;
+}
+
+@keyframes hide_slide {
+  0% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/* Styles for the exclamation icon */
+.alert .fa-exclamation-circle {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ce8500;
+  font-size: 24px;
+}
+
+/* Styles for the notification message */
+.alert .msg {
+  padding: 0 20px;
+  font-size: 17px;
+  color: #ce8500;
+}
+
+/* Styles for the close button */
+.alert .close-btn {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffd080;
+  padding: 12px 10px; /* Adjusted padding for smaller button */
+  cursor: pointer;
+}
+
+.alert .close-btn:hover {
+  background: #ffc766;
+}
+
+.alert .close-btn .fas {
+  color: #ce8500;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+/* Styles for success and danger alerts */
+.alert.success {
+  background: #b7e1cd;
+  border-left-color: #5cb85c;
+}
+
+.alert.danger {
+  background: #f5b5b5;
+  border-left-color: #d9534f;
+}
+
+/* Styles for success and danger buttons */
+.success-btn {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.danger-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
+/* ... other styles ... */

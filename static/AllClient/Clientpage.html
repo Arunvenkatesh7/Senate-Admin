@@ -1,0 +1,406 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home Page</title>
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <style>
+           .header-area.static{
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+   margin-top: 0px;
+   margin-bottom:30px
+
+
+}
+
+ .header-area.scrolling{
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  margin-top: 0px;
+   margin-bottom:30px
+
+
+}
+
+.navbar-brand.static,
+.navbar-brand img {
+  height: 120px;
+  margin-top: -10px;
+  margin-bottom:0px
+    padding-top: 40px;
+  padding-bottom: 20px;
+
+}
+
+.navbar-brand img.scrolling{
+  height: 110px;
+  margin-top: 10px;
+  margin-bottom:0px
+   padding-top: -5px;
+
+  padding-bottom: 10px;
+
+}
+
+.spacer {
+  margin-top: 140px;
+}
+
+    </style>
+
+
+    <!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet" href="css/Client.css">
+    <!-- all css here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+        var headerArea = $('.header-area');
+        var navbarBrand = $('.navbar-brand');
+        var navbarBrandImg = $('.navbar-brand img');
+
+        if (scrollTop > 0) {
+          headerArea.addClass('scrolling');
+          navbarBrand.addClass('scrolling');
+          navbarBrandImg.addClass('scrolling');
+        } else {
+          headerArea.removeClass('scrolling');
+          navbarBrand.removeClass('scrolling');
+          navbarBrandImg.removeClass('scrolling');
+        }
+      });
+    });
+  </script>
+
+</head>
+
+ <body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Page Wraper Here Start -->
+    <div class="page-wraper" id="main-home">
+        <!-- Header Area Start -->
+
+        <header class="header-area static">
+
+            <!-- Menu Area Start -->
+            <div class="header-area" id="sticky-header" style="background-color: #212121;">
+                <div class="container">
+                    <!-- Menu Start -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main-menu navbar navbar-expand-md justify-content-between">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-target="#navigation" aria-expanded="false">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+
+                                     <a class="navbar-brand static" href="index.html"><img src="img/SenIco8.ico" alt="logo"
+											class="img-responsive"></a>
+                                </div>
+                                <div class="collapse navbar-collapse" id="navigation">
+                                    <ul class="nav navbar-nav ms-auto">
+                                        <li class="active"><a href="index.html">Home</a></li>
+                                        <li><a href="about-us.html"></a></li>
+                                        <li><a href="services.html">service</a></li>
+                                        <li><a href="project.html">Project</a></li>
+                                        <li><a href="#">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="about-us.html">about Us</a></li>
+                                                <li><a href="services.html">service</a></li>
+                                                <li><a href="team.html">Team</a></li>
+                                                <li><a href="project.html">Project</a></li>
+                                                <li><a href="blog-right-sidebar.html">blog sidebar</a></li>
+                                                <li><a href="blog-details.html">blog details</a></li>
+                                                <li><a href="contact-us.html">contact</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="contact-us.html">contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu End -->
+                </div>
+            </div>
+            <!-- Menu Area Start -->
+            <!-- Slider Area Start -->
+            <div class="slider slider-for">
+                <!-- Slider Single Item -->
+                <div class="slider-item slickslider">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Thumbnail Image -->
+
+            <!-- Thumbnail Image -->
+            <!-- Slider Area End -->
+            <!-- Scroll Icon -->
+            <div class="scroll-icon text-center">
+                <a href="#about" class="wow fadeInDown infinite animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInDown;"><i
+						class="icofont icofont-scroll-down"></i></a>
+                <!-- Scroll Icon -->
+            </div>
+
+            </header>
+        </div>
+
+
+    <div class="spacer"></div>
+
+     <!-- Content Area Start -->
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+ </div>
+            </div>
+        </div>
+    </div>
+
+
+      <div class="section-padding clientgallery-section" id="clientgallery">
+        <div class="clientcontainer">
+          <!-- Section Title Start -->
+           <h2  class="cardh2css">OUR VALUED CLIENTS: TRUSTED PARTNERS IN SUCCESS</h2>
+ <p class="cardpcss">Our valued clients are the driving force behind our success. Through trust and collaboration, we have achieved remarkable results together.</p>
+          <h2  class="h3cardcss"><span class="mover15">Interspace<span> Properties,Anna Nagar</h2>
+      <p style="padding-left:100px;" class="cardpcss" >Leading Interspace Properties Constructions</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture1.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture2.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture3.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture4.jpg"/></a>
+
+
+          </div>
+
+            <div style="padding-top:30px;"></div>
+                <h2    class="h3cardcss">Vettri Theatres, Chromepet.</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Vettri Theatres, Chromepet</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture5.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture6.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture7.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture8.jpg"/></a>
+
+
+          </div>
+
+
+
+              <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Fomra Housing, Anna Nagar</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Fomra Housing, Anna Nagar</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture1.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture2.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture3.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture4.jpg"/></a>
+
+
+          </div>
+
+
+              <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">RWD , Kelambakkam.</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Vettri Theatres, Chromepet</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture5.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture6.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture7.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture8.jpg"/></a>
+
+
+          </div>
+
+
+              <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Gayathri Sridhar Residence, Navallur</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Vettri Theatres, Chromepet</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture1.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture2.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture3.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture4.jpg"/></a>
+
+
+          </div>
+
+    <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Rajaram Residence, Anna Nagar.</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Vettri Theatres, Chromepet</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture1.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture2.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture3.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture4.jpg"/></a>
+
+
+          </div>
+
+
+                <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Gayathri Sridhar Residence, Navallur</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Vettri Theatres, Chromepet</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture1.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture2.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture3.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture4.jpg"/></a>
+
+
+          </div>
+
+                  <div style="padding-top:30px;"></div>
+                <h2  class="h3cardcss">AA Garments-Manali</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Vettri Theatres, Chromepet</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture1.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture2.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture3.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture4.jpg"/></a>
+
+
+          </div>
+
+                  <div style="padding-top:30px;"></div>
+                <h2 class="h3cardcss">SAMEERA ESTATES PLTD,</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Vettri Theatres, Chromepet</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture1.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture2.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture3.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture4.jpg"/></a>
+
+
+          </div>
+
+
+                  <div style="padding-top:30px;"></div>
+                <h2   class="h3cardcss">Mrs.Kalaiselvi Residency,Uthandi</h2>
+      <p style="padding-left:250px;" class="cardpcss" >Vettri Theatres, Chromepet</p>
+          <!-- clientgallery Section Start -->
+
+          <div class="clientgallery sets">
+            <a ><img src="img/chrompet/picture1.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture2.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture3.jpg"/></a>
+
+            <a ><img src="img/chrompet/picture4.jpg"/></a>
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+  <script src="js/Client.js"></script>
+    <!-- all js here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/ajax-mail.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- google map api -->
+
+    <script src="js/main.js"></script>
+ </body>
+
+</html>

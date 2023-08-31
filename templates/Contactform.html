@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .contact-container {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .contact-heading {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .contact-info h2 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .contact-info p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-heading">Contact Information</div>
+        <div class="contact-info">
+            <div class="name">
+                <h2>Name:</h2>
+                <p>{{ data.formname}}</p>
+            </div>
+            <div class="email">
+                <h2>Email:</h2>
+                <p>{{ data.formmail}}</p>
+            </div>
+            <div class="phone">
+                <h2>Phone:</h2>
+                <p>{{ data.formphone}}</p>
+            </div>
+            <div class="location">
+                <h2>Location:</h2>
+                <p>{{ data.formlocation}}</p>
+            </div>
+            <div class="type">
+                <h2>Type:</h2>
+                <p>{{ data.formconsType }}</p>
+            </div>
+            <div class="details">
+                <h2>Details:</h2>
+                <p>{{ data.formconsDetails }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

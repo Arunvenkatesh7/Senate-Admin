@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Subscription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Allfiles/css/notstyle.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Subscribe to Newsletter</h1>
+    <form id="subscribe-form">
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <input type="submit" id="subscribe-btn" value="SUBSCRIBE NOW" class="search-button">
+    </form>
+
+    <div class="alert hide">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg"></span>
+        <div class="close-btn">
+            <span class="fas fa-times"></span>
+        </div>
+    </div>
+
+<script>
+    $(document).ready(function() {
+        $('#subscribe-form').submit(function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            var email = $('#email').val();
+
+            if (!isEmailValid(email)) {
+                showNotification('danger', 'Invalid email format.');
+                return;
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: '/subscribe',
+                data: { 'email': email },
+                success: function(response) {
+                    var theme = response.success ? 'success' : 'danger';
+                    showNotification(theme, response.message);
+                },
+                error: function() {
+                    showNotification('danger', 'An error occurred while subscribing.');
+                }
+            });
+        });
+
+        function isEmailValid(email) {
+    var pattern = /^[^\s@]+@gmail\.com$/;
+    return pattern.test(email);
+}
+
+        function showNotification(theme, message) {
+            $('.alert').removeClass('success danger').addClass(theme);
+            $('.msg').text(message);
+            showAlert();
+        }
+
+        $('.close-btn').click(function() {
+            hideAlert();
+        });
+
+        function showAlert() {
+            $('.alert').removeClass('hide');
+            $('.alert').addClass('showAlert');
+            setTimeout(function() {
+                hideAlert();
+            }, 5000);
+        }
+
+        function hideAlert() {
+            $('.alert').removeClass('show');
+            $('.alert').addClass('hide');
+        }
+    });
+</script>
+
+</body>
+</html>

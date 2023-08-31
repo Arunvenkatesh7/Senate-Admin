@@ -1,0 +1,118 @@
+.addonsbody {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: 'El Messiri', sans-serif;
+}
+
+.addonscontainer {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.addonscard {
+  position: relative;
+  margin-left: 21px;
+  margin-right: 9px;
+  margin-bottom: -80px;
+}
+
+@media screen and (max-width:767px){
+
+.addonscard {
+  margin-left: 50px;
+}
+}
+
+.addonscard .face {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  transition: 0.5s;
+  border-radius: 12px;
+}
+
+.addonscard .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.addonscard:hover .face.face1 {
+  transform: translateY(0);
+  background-image: linear-gradient(to left bottom, #fff200, #fff200, #2121, #fff200, #fff200);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.addonscard .face.face1 .addonscontent {
+  opacity: 0.8;
+  transition: 0.5s;
+  color: black; /* Text color is black before hovering */
+}
+
+.addonscard:hover .face.face1 .addonscontent {
+  opacity: 1;
+  color: #fff; /* Text color changes to yellow after hovering */
+}
+
+.addonscard .face.face1 .addonscontent img {
+  max-width: 60px;
+}
+
+.addonscard .face.face1 .addonscontent h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.addonscard .face.face2 {
+  position: relative;
+  background: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.addonscard:hover .face.face2 {
+  transform: translateY(0);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.addonscard .face.face2 p {
+  margin: 0;
+  padding: 0;
+}
+
+.addonscard .face.face2 a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+.addonscard:hover .face.face2 a {
+  background: #333;
+}
+

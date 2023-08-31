@@ -1,0 +1,378 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-weight: 500;
+  color: #4c4c4c;
+  outline: none;
+  visibility: visible;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+.section-padding {
+  padding-top: 80px;
+}
+
+.clientgallery-section {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #f44336;
+}
+
+.filter {
+  text-align: center;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px 4px 4px 0;
+  display: inline-block;
+  color: #003;
+  background: #eee;
+  border: 1px solid #f44336;
+  transition: all 0.4s;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn:hover,.btn-active {
+  background: #f44336;
+  color: #fff;
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px);
+}
+.clientgallery {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  max-width: 1320px;
+  flex-wrap: wrap;
+  margin: 25px auto;
+  /* gap: 14px; */
+}
+.clientgallery a {
+  display: flex;
+}
+.clientgallery img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px 10px;
+}
+
+.clientgallery img:hover {
+  transform: scale(1.1);
+}
+
+.sets .hide,
+.sets .pophide {
+  width: 0%;
+  opacity: 0;
+}
+
+.closeBtn {
+  position: absolute;
+  font-size: 22px;
+  font-weight: 500;
+  right: 25px;
+  top: 25px;
+  color: white;
+  transition: 0.5s linear;
+  padding: 8px 40px;
+  border-radius: 25px;
+  background: red;
+  outline-offset: -6px;
+  outline: 2px solid #fff;
+}
+.closeBtn:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+  outline: 2px solid #000;
+}
+
+.openDiv {
+  width: 100%;
+  height: 100vh;
+  background: #000000e7;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  z-index: 9999;
+}
+.imgPreview {
+  width: 70%;
+  object-fit: scale-down;
+  max-height: 40vw;
+  height: auto;
+}
+.prevButton,
+.nextButton {
+  transition: 1s linear;
+  padding: 10px 35px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  background: #0005;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: 10px;
+}
+.prevButton:hover,
+.nextButton:hover {
+  background: #fff;
+  color: black;
+}
+
+/* resposive CSS Code */
+
+@media max-width: 1199px {
+  .section-padding {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 991px) {
+  .section-padding {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: 36px;
+  }
+  .clientgallery img {
+    margin: 8px 8px;
+    width: 175px;
+  }
+  .closeBtn {
+    padding: 6px 25px;
+  }
+  .prevButton,
+  .nextButton {
+    font-size: 18px;
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section-padding {
+    padding-top: 30px;
+  }
+
+  .clientgallery img {
+    margin: 8px 6px;
+    width: 155px;
+  }
+
+  .closeBtn {
+    font-size: 18px;
+    border-radius: 15px;
+  }
+  .prevButton,
+  .nextButton {
+    font-size: 18px;
+    padding: 6px 20px;
+    border-radius: 10px;
+    margin: 5px;
+  }
+
+  .imgPreview {
+    width: 90%;
+    max-height: 50vh;
+    height: auto;
+  }
+
+}
+
+ .cardpcss{
+  color: #777777;
+        font-family: "Roboto", sans-serif;
+        max-width: 1000px;
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0px auto 100px;
+        margin-left:300px;}
+
+
+
+.cardh2css{
+padding-left:210px;
+font-family: "Heebo", sans-serif;
+    font-size: 38px;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;}
+
+
+.h3cardcss{
+  padding-left:480px;
+font-family: "Heebo", sans-serif;
+    font-size: 32px;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+.mover15{
+padding-left:0px;
+
+}
+#mover30{
+padding-left:560px;
+}
+#mover29{
+padding-left:500px;
+}
+.mover28{
+padding-bottom:40px;
+}
+#mover31{
+padding-left:610px;
+}
+#mover14{
+padding-left:550px;}
+
+@media screen and (max-width:767px){
+
+.mover15{
+padding-left:70px;
+}
+#mover31{
+padding-left:50px;
+}
+#mover29{
+padding-left:90px;
+}
+#mover30{
+padding-left:40px;
+}
+.cardh2css{
+padding-left:100px;
+font-family: "Heebo", sans-serif;
+    font-size: 38px;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;}
+
+.h3cardcss{
+  padding-left:50px;
+font-family: "Heebo", sans-serif;
+    font-size: 32px;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+
+ .cardpcss{
+  color: #777777;
+        font-family: "Roboto", sans-serif;
+        max-width: 680px;
+        font-size: 18px;
+
+        margin: 0px auto 45px;
+        margin-left:20px;
+        }
+
+
+
+#mover14{
+padding-left:0px;}
+
+}
+
+
+
+
+
+
+.probtn{
+
+  display: inline-block;
+  margin: 6px;
+  font-size: inherit;
+  line-height: 1.42;
+  padding: 0.6em 1.6em;
+  font-weight: normal;
+  border-width: 2px;
+  border-style: solid;
+  background: transparent;
+  border-radius: 1.46em;
+  cursor: pointer;
+  font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+  user-select: none;
+  vertical-align: bottom;
+  position: relative;
+  border-style: solid;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+.probtn {
+  color: #212121;
+  border-color: #FFF200;
+  font-weight:bold;
+  font-size:18px;
+  background-color: #FFF200;
+}
+.probtn:hover {
+  color: #FFF200;
+  background-color: #212121;
+  font-weight:bold;
+    border-color: #212121;
+}
+.probtn:active {
+  background-color: #FFF200;
+}
+.probtn:active:after {
+  background-color: #1e2027;
+}
+.probtn:after {
+  background-color: #252730;
+}
+
+
+#mover32{
+padding-left:100px;
+max-width:820px;
+}
+
+.centersw{
+
+
+}
+
+@media screen and (max-width:767px){
+#mover32{
+padding-left:0px;
+
+}
+
+}

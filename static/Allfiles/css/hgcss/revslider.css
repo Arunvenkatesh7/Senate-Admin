@@ -1,0 +1,78 @@
+.tp-caption.tm-button-rv-primary,
+.tm-button-rv-primary {
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Roboto;
+    text-decoration: none;
+    background-color: #1c202d;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 5px 5px 5px 5px
+}
+
+.tp-caption.tm-button-rv-white,
+.tm-button-rv-white {
+    color: #1c202d;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Roboto;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 5px 5px 5px 5px
+}
+
+.tp-caption.tm-button-rv-white:hover,
+.tm-button-rv-white:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #1c202d;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 5px 5px 5px 5px
+}
+
+.tp-caption.tm-button-rv-primary,
+.tm-button-rv-primary {
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Roboto;
+    text-decoration: none;
+    background-color: #1c202d;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 5px 5px 5px 5px
+}
+
+.tp-caption.tm-button-rv-primary,
+.tm-button-rv-primary {
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Roboto;
+    text-decoration: none;
+    background-color: #1c202d;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 5px 5px 5px 5px
+}
+
+.custom-nav .fa-chevron-right {
+    margin-left: 10px;
+}

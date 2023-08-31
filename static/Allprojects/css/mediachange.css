@@ -1,0 +1,50 @@
+
+.probtn{
+  display: inline-block;
+  margin-left:43%;
+  font-size: inherit;
+  line-height: 1.42;
+  padding: 0.6em 1.6em;
+  font-weight: normal;
+  border-width: 2px;
+  border-style: solid;
+  background: transparent;
+  border-radius: 1.46em;
+  cursor: pointer;
+  font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+  user-select: none;
+  vertical-align: bottom;
+  position: relative;
+  border-style: solid;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+.probtn {
+  color: #212121;
+  border-color: #FFF200;
+  font-weight:bold;
+  font-size:18px;
+  background-color: #FFF200;
+}
+@media screen and (max-width: 767px){
+.probtn{
+left:0;
+margin-left:100px;
+}
+}
+.probtn:hover {
+  color: #FFF200;
+  background-color: #212121;
+  font-weight:bold;
+    border-color: #212121;
+}
+.probtn:active {
+  background-color: #FFF200;
+}
+.probtn:active:after {
+  background-color: #1e2027;
+}
+.probtn:after {
+  background-color: #252730;
+}
