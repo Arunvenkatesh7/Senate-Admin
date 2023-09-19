@@ -1354,3 +1354,30 @@ height:70px;
 }
 
 }
+
+
+
+.newinode{
+	padding-top:100px;
+	padding-left:150px;
+font-family: 'Heebo', sans-serif;
+    font-size: 37px;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+
+.newinode1{
+    
+    color: #777777;
+    font-family: 'Roboto', sans-serif;
+    
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0px auto 45px;
+    margin-left:350px;
+    
+}
