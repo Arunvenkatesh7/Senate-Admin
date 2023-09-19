@@ -10,7 +10,7 @@ app.config['MAIL_USERNAME']='senatedetails@gmail.com'
 app.config['MAIL_PASSWORD']='egboimqyrcewictq'
 mail=Mail(app)
 
-
+    
 
 @app.route('/Home',methods=["POST","GET"])
 @app.route('/',methods=["POST","GET"])
