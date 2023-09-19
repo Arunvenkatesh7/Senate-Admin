@@ -133,9 +133,13 @@ padding-left:170px;
 }
 
 .mover4{
-padding-top:100px;
-padding-left:170px;
-}
+	font-family: "Heebo", sans-serif;
+		font-size: 37px;
+		color: #222222;
+		font-weight: bold;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+	}
 
 @media screen and (max-width:767px){
 
