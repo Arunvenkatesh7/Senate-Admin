@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Project Uploader</title>
+    
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/Client.css') }}">
+    <!-- all css here -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/bootstrap.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/font-awesome.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/shortcode/shortcodes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/responsive.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+   
+   
+    <h1>Upload a Project</h1>
+    <form method="POST" enctype="multipart/form-data" action="/upload_project">
+        <input type="text" name="title" placeholder="Project Title" required><br>
+        <input type="text" name="subtitle" placeholder="Project Subtitle" required><br>
+        <input type="file" name="files" multiple><br>
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Check the status of uploaded projects:</h2>
+    <a href="/projects">View Projects</a>
+
+
+
+    <h2>Check the status of uploaded projects: part 2</h2>
+    <a href="/clientelle">View clients</a>
+
+    <h2>Uploaded Projects</h2>
+    <h2>Uploaded Projects</h2>
+    {% if projects %}
+
+    {% for project in projects %}
+    <div style="padding-top:30px;"></div>
+    <h2   class="h3cardcss">{{ project['title'] }}</h2>
+<p  class="cardpcss" >{{ project['subtitle'] }}</p>
+<!-- clientgallery Section Start -->
+<div class="moverset9">
+<div class="clientgallery sets">
+
+
+
+{% for image in project['images'] %}
+                              <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Project Image">
+                          {% endfor %}
+
+
+</div></div>
+{% endfor %}
+
+{% endif %}
+
+
+
+    
+
+
+</body>
+</html>

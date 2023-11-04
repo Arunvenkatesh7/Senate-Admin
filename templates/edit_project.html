@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Project Uploader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+     
+
+     
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='loginfiles/navbar.css')}}">
+<link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/Client.css') }}">
+    <!-- all css here -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/bootstrap.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='AllClient/css/font-awesome.min.css') }}" >
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+
+
+        body {
+          font-family: "Inter", sans-serif;
+        }
+        .formbold-mb-5 {
+          margin-bottom: 20px;
+        }
+        .formbold-pt-3 {
+          padding-top: 12px;
+        }
+        .formbold-main-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 48px;
+        }
+      
+        .formbold-form-wrapper {
+          margin: 0 auto;
+          max-width: 550px;
+          width: 100%;
+          background: white;
+        }
+        .formbold-form-label {
+          display: block;
+          font-weight: 500;
+          font-size: 16px;
+          color: #07074d;
+          margin-bottom: 12px;
+        }
+        .formbold-form-label-2 {
+          font-weight: 600;
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+      
+        .formbold-form-input {
+          width: 100%;
+          padding: 12px 24px;
+          border-radius: 6px;
+          border: 1px solid #e0e0e0;
+          background: white;
+          font-weight: 500;
+          font-size: 16px;
+          color: #6b7280;
+          outline: none;
+          resize: none;
+        }
+        .formbold-form-input:focus {
+          border-color: #FFF112;
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+      
+        .formbold-btn {
+          text-align: center;
+          font-size: 16px;
+          border-radius: 6px;
+          padding: 14px 32px;
+          border: none;
+          font-weight: 600;
+          background-color: #FFF112;
+          color: #000;
+          cursor: pointer;
+        }
+        .formbold-btn:hover {
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+
+        .formbold-btn2 {
+           
+          text-align: center;
+          font-size: 16px;
+          border-radius: 6px;
+          padding: 14px 32px;
+          border: none;
+          font-weight: 600;
+          background-color: #FFF112;
+          color: #000;
+          cursor: pointer;
+          
+          margin-top: 20px;
+          margin-bottom: 70px;
+  
+    margin-left:210px;
+
+        }
+
+        .formbold-btn3 {
+           
+           text-align: center;
+           font-size: 16px;
+           border-radius: 6px;
+           padding: 14px 32px;
+           border: none;
+           font-weight: 600;
+           background-color: #FFF112;
+           color: white;
+           cursor: pointer;
+           margin-left: 20px;
+           margin-top: 20px;
+           display: inline-block;
+     vertical-align: middle;
+     margin-left:100px;
+     margin-bottom: 70px;
+         }
+
+
+
+        .formbold-btn2:hover {
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+
+
+        .formbold-btn1{
+
+            text-align: center;
+    font-size: 14px; /* Adjusted font size */
+    border-radius: 6px;
+    padding: 10px 20px; /* Adjusted padding */
+    border: none;
+    font-weight: 600;
+    background-color: #FFF112;
+    color: #000;
+    cursor: pointer;
+          margin-left: 270px;
+          margin-bottom: 10px;
+
+        }
+
+        .formbold-btn1:hover {
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+        .formbold--mx-3 {
+          margin-left: -12px;
+          margin-right: -12px;
+        }
+        .formbold-px-3 {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        .flex {
+          display: flex;
+        }
+        .flex-wrap {
+          flex-wrap: wrap;
+        }
+        .w-full {
+          width: 100%;
+        }
+        @media (min-width: 540px) {
+          .sm\:w-half {
+            width: 50%;
+          }
+        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .formbold-mb-5 {
+    margin-bottom: 20px;
+  }
+  .formbold-pt-3 {
+    padding-top: 12px;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+  }
+  .formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 12px;
+  }
+  .formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus {
+    border-color: #FFF112;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold-btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: #FFF112;
+    color: #000;
+    cursor: pointer;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .w-full {
+    width: 100%;
+  }
+
+  .formbold-file-input input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .forminput input{
+    opacity: 0;
+  
+    width: 100%;
+    height: 100%;
+
+
+  }
+
+  .forminput label{
+    position: relative;
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+  }
+
+  .formbold-file-input label {
+    position: relative;
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+  }
+  .formbold-drop-file {
+    display: block;
+    font-weight: 600;
+    color: #07074d;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .formbold-or {
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .formbold-browse {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .formbold-file-list {
+    border-radius: 6px;
+    background: #f5f7fb;
+    padding: 16px 32px;
+  }
+
+  .formbold-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .formbold-file-item button {
+    color: #07074d;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .formbold-file-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    padding-right: 12px;
+  }
+  .formbold-progress-bar {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px;
+    background: #e2e5ef;
+  }
+
+  .formbold-progress {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #FFF112;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 540px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+
+  .formbold-file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .formbold-file-name {
+            margin-right: 10px;
+        }
+
+
+        .h3cardcss1{
+    padding-left:560px;
+  font-family: "Heebo", sans-serif;
+      font-size: 36px;
+      color: #222222;
+      font-weight: bold;
+      margin-bottom: 15px;
+      margin-top:-70px;
+    }
+
+  .h3cardcsssub{
+    padding-left:580px;
+  font-family: "Heebo", sans-serif;
+      font-size: 32px;
+      color: #222222;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .cardpcss{
+        color: #777777;
+        font-family: "Roboto", sans-serif;
+        max-width: 1000px;
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0px auto 100px;
+        margin-left:300px;
+        
+
+      }
+
+      .mover401{
+
+        padding-top:1000px;
+      }
+
+      #mover890{
+
+        margin-left:200px;
+        margin-top:100px;
+        font-size: 41px;
+        padding-bottom: 100px;
+      }
+
+      </style>
+      
+
+    
+</head>
+<body>
+
+      <!--=============== HEADER ===============-->
+      <header class="header">
+        <nav class="nav container">
+           <div class="nav__data">
+              <a style="text-decoration: none;" href="#" class="nav__logo">
+                 <i class="ri-planet-line"></i> SenateEngineering
+              </a>
+              
+              <div style="margin-left: 200px;" class="nav__toggle" id="nav-toggle">
+                 <i class="ri-menu-line nav__burger"></i>
+                 <i style="margin-left: 100px;" class="ri-close-line nav__close"></i>
+              </div>
+           </div>
+
+           <!--=============== NAV MENU ===============-->
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li><a style="text-decoration: none;" href="#" class="nav__link">AdminPage</a></li>
+
+                
+                 <li><a style="text-decoration: none;" href="/projects" class="nav__link">ClientPage</a></li>
+
+                 <!--=============== DROPDOWN 2 ===============-->
+                 
+
+                    
+    
+                 <li><a style="text-decoration: none;" href="#" class="nav__link">LogOut</a></li>
+              </ul>
+           </div>
+        </nav>
+     </header>
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <div style="margin-bottom: 120px;"></div>
+    <!-- Display admin content here -->
+    <h1  class="h3cardcss" id="mover890">Editor Page</h1>
+     
+
+    <div class="formbold-main-wrapper">
+       
+        <div class="formbold-form-wrapper">
+          <form method="POST" enctype="multipart/form-data" action="/update_project/{{ project['title'] }}/{{ project['subtitle'] }}">
+            <div class="formbold-mb-5">
+              <label for="name" class="formbold-form-label"> Project Name </label>
+              <input
+                type="text"
+                name="title"
+                id="name"
+                value="{{ project['title'] }}"
+                class="formbold-form-input"
+                required
+              />
+            </div>
+      
+           
+      
+            <div class="formbold-mb-5">
+              <label for="subject" class="formbold-form-label"> Project Information </label>
+              <input
+                type="text"
+                name="subtitle"
+                id="subject"
+                value="{{ project['subtitle'] }}"
+                class="formbold-form-input"
+                required
+              />
+            </div>
+            
+            <label class="formbold-form-label formbold-form-label-2">
+                Upload File
+              </label>
+      
+
+
+        <div class="formbold-mb-5 forminput">
+        <input type="file" name="files" multiple id="file" />
+        <label for="file">
+            <div>
+                <span class="formbold-drop-file"> Drop files here </span>
+                <span class="formbold-or"> Or </span>
+                <span class="formbold-browse"> Browse </span>
+            </div>
+        </label>
+        </div>
+           
+    <div class="formbold-file-list formbold-mb-5" id="selectedFiles"></div>
+
+
+
+                <input type="submit" class="formbold-btn" value="Edit Project">
+            
+            
+            
+          </form>
+         
+        </div>
+      </div>
+
+
+   
+      <h1  class="h3cardcss" id="mover890">Uploaded Projects</h1>
+
+
+
+    {% if projects %}
+
+    {% for project in projects %}
+    <div style="padding-top:30px;"></div>
+    <h2   class="h3cardcss1">{{ project['title'] }}</h2>
+<p  class="cardpcss" >{{ project['subtitle'] }}</p>
+<!-- clientgallery Section Start -->
+<div class="moverset9">
+<div class="clientgallery sets">
+
+
+
+{% for image in project['images'] %}
+ <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Project Image">
+                          {% endfor %}
+
+                          <a class="formbold-btn2" href="/edit_project/{{ project['title'] }}/{{ project['subtitle'] }}">Edit Project</a>
+                          <a class="formbold-btn3" href="/delete_project/{{ project['title'] }}/{{ project['subtitle'] }}">Delete Project</a>
+</div></div>
+{% endfor %}
+
+{% endif %}
+
+
+<script>
+    document.getElementById('file').addEventListener('change', handleFileSelect);
+
+    function handleFileSelect(event) {
+        const files = event.target.files;
+        const selectedFilesContainer = document.getElementById('selectedFiles');
+
+        selectedFilesContainer.innerHTML = ''; // Clear previous selections
+
+        for (const file of files) {
+            const fileItem = document.createElement('div');
+            fileItem.innerHTML = `
+                <span>${file.name}</span>
+                <button type="button" class="formbold-btn1">Deselect</button>
+            `;
+
+            const deselectButton = fileItem.querySelector('.formbold-btn1');
+            deselectButton.addEventListener('click', () => {
+                fileItem.remove(); // Remove the file from the list
+                event.target.value = null; // Reset the input field to allow re-selection of the same file
+            });
+
+            selectedFilesContainer.appendChild(fileItem);
+        }
+    }
+</script>
+    
+<script src="{{ url_for('static',filename='loginfiles/navbar.js') }}"></script>
+
+</body>
+</html>

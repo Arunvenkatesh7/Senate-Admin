@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Projects</title>
+</head>
+<body>
+    <h1>Projects</h1>
+    <ul>
+        {% if projects %}
+
+        <h1>Project projecter</h1>
+        {% for project in projects %}
+            <li>
+                <h2>{{ project['title'] }}</h2>
+                <p>{{ project['subtitle'] }}</p>
+                <ul>
+                    {% for image in project['images'] %}
+                        <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Project Image">
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+
+        {% endif %}
+    </ul>
+</body>
+</html>

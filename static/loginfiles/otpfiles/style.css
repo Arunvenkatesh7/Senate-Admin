@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #292929;
+    color: #292929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #FFF112;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #000;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #292929 inset;
+    -webkit-text-fill-color: #000 !important;
+    border:none;
+    padding-left: 10px;
+}
+
+input:-webkit-autofill::placeholder {
+    font-size: 0;
+}
+input:focus ~ label {
+    top: -15px;
+    font-size: 12px;
+    color: #5A5A5A;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+    color: #000;
+}
+
+input:-webkit-autofill + label {
+
+    visibility: hidden;
+}
+
+button.btn {
+    background-color:#292929;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button.btn:hover {
+    background-color: #ff5050;
+}
+.otpform .input-field {
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .input-field input {
+    height: 45px;
+    width: 42px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 2px solid #000;
+   
+  }
+  .input-field input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .input-field input::-webkit-inner-spin-button,
+  .input-field input::-webkit-outer-spin-button {
+    display: none;
+  }
+  .otpform .otpbutton {
+    margin-top: 25px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 9px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    pointer-events: none;
+    background: #292929;
+    transition: all 0.2s ease;
+  }
+  .otpform .otpbutton.active {
+    background: #30302f;
+    pointer-events: auto;
+  }
+  .otpform .otpbutton:hover {
+    background: #0e4bf1;
+  }
+  
+
+.otpsubmit{
+
+  margin-top: 25px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 9px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    pointer-events: none;
+    background: #292929;
+    transition: all 0.2s ease;
+
+
+}
+
+
+#submitOTP{
+
+  margin-top: 25px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 9px 0;
+  background: #292929;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+
+}
+
+
+
+  /* Styling for OTP inputs */
+.otp-input {
+    width: 2em;
+    height: 2em;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 0.2em;
+    border: 2px solid #292929;
+    border-radius: 5px;
+  }
+  
+  /* Styling for OTP button */
+  .otpbutton {
+    background-color: #5A5A5A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .otpbutton.active {
+    background-color: #292929;
+  }
+  
+  .otpbutton:hover {
+    background-color: #292929;
+  }
+  
+  .notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5050;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: none;
+    animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 20px;
+    }
+}

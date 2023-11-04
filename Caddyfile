@@ -1,3 +1,0 @@
-http://13.233.43.53 {
-    reverse_proxy localhost:8000
-}

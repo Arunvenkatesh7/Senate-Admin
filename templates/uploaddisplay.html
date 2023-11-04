@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Example</title>
+    <style>
+        .selected-files {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="formbold-mb-5 formbold-file-input">
+        <input type="file" name="files" multiple id="file" />
+        <label for="file">
+            <div>
+                <span class="formbold-drop-file"> Drop files here </span>
+                <span class="formbold-or"> Or </span>
+                <span class="formbold-browse"> Browse </span>
+            </div>
+        </label>
+    </div>
+
+    <div class="selected-files" id="selectedFiles"></div>
+
+    <script>
+        document.getElementById('file').addEventListener('change', handleFileSelect);
+
+        function handleFileSelect(event) {
+            const files = event.target.files;
+            const selectedFilesContainer = document.getElementById('selectedFiles');
+
+            selectedFilesContainer.innerHTML = ''; // Clear previous selections
+
+            for (const file of files) {
+                const fileItem = document.createElement('div');
+                fileItem.innerHTML = `
+                    <span>${file.name}</span>
+                    <button type="button" class="deselect-btn">Deselect</button>
+                `;
+
+                const deselectButton = fileItem.querySelector('.deselect-btn');
+                deselectButton.addEventListener('click', () => {
+                    fileItem.remove(); // Remove the file from the list
+                    event.target.value = null; // Reset the input field to allow re-selection of the same file
+                });
+
+                selectedFilesContainer.appendChild(fileItem);
+            }
+        }
+    </script>
+</body>
+</html>
