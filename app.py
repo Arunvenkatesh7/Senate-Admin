@@ -26,7 +26,7 @@ app.config['MAIL_SERVER']="smtp.googlemail.com"
 app.config['MAIL_PORT']=587
 app.config['MAIL_USE_TLS']=True
 app.config['MAIL_USERNAME']='senatedetails@gmail.com'
-app.config['MAIL_PASSWORD']='egboimqyrcewictq'
+app.config['MAIL_PASSWORD']='bfdq rouk rafs rcry'
 app.config['MAIL_USE_SSL'] = False
 mail=Mail(app)
 

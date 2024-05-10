@@ -1,8 +1,0 @@
-www.senateeng.com {
-    redir https://senateeng.com{uri}
-}
-
-
-senateeng.com {
-    reverse_proxy localhost:8000
-}
